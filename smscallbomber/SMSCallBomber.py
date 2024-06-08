@@ -53,6 +53,7 @@ class SMSCallBomber(threading.Thread):
                 break
 
             service = Service(service_info, self.args.phone, self.args.timeout, self.args.proxy)
+            domain_name = service.get_domain_name()
             try:
                 service.send_request()
                 local_successful_count += 1

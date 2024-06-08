@@ -57,6 +57,12 @@ class Service:
         proxy = requests.get("https://gimmeproxy.com/api/getProxy?curl=true&protocol=http&supportsHttps=true")
         return {"http": proxy.text, "https": proxy.text}
 
+    def get_domain_name(self):
+        website = self.service_info['info'].get('website', '')
+        if website:
+            return website
+        return ''
+
     def send_request(self):
         self.__parse_data()
         self.__replace_data()
