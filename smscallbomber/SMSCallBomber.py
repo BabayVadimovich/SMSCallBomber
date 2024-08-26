@@ -58,13 +58,17 @@ class SMSCallBomber(threading.Thread):
                 service.send_request()
                 local_successful_count += 1
             except exceptions.ReadTimeout:
-                print(f"Fail - {domain_name} - ReadTimeout")
+                logging.info(f"Fail - {domain_name} - ReadTimeout")
+                local_failed_count += 1
             except exceptions.ConnectTimeout:
-                print(f"Fail - {domain_name} - ConnectTimeout")
+                logging.info(f"Fail - {domain_name} - ConnectTimeout")
+                local_failed_count += 1
             except exceptions.ConnectionError:
-                print(f"Fail - {domain_name} - ConnectionError")
+                logging.info(f"Fail - {domain_name} - ConnectionError")
+                local_failed_count += 1
             except Exception as err:
-                print(err) 
+                logging.error(f"{err}")
+                local_failed_count += 1
             except (KeyboardInterrupt, SystemExit):
                 exit()
 

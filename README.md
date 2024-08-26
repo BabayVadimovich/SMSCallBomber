@@ -1,6 +1,6 @@
 # SMSCallBomber
 
-## English
+## English(Русский ниже)
 
 ### Description
 
@@ -50,6 +50,11 @@ time.sleep(5) # Increase the time if the results contain zeros
 successful, failed = bomber.send_report()
 print(f"Successfully sent (Not everyone can get there!): {successful}")
 print(f"Failed to send: {failed}")
+```
+
+It is also possible to use in an asynchronous environment if you slightly modify the code and use 
+```python
+await bomber._run()
 ```
 
 ### Donation
@@ -116,6 +121,11 @@ time.sleep(5) # Увеличьте время если в результатах
 successful, failed = bomber.send_report()
 print(f"Успешно отправлено(Дойти могут не все!): {successful}")
 print(f"Не удалось отправить: {failed}")
+```
+
+Также возможно использование в асихронной среде, если немного переделать код и использовать 
+```python
+await bomber._run()
 ```
 
 ### Пожертвование

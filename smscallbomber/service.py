@@ -27,7 +27,8 @@ class Service:
     def __init__(self, service_info, phone, timeout, proxy):
         self.service_info = service_info
         self.timeout = timeout
-        if self.proxy:
+        self.proxy = None
+        if proxy:
             self.proxy = self.generate_proxy()
         self.phone = phone
 
