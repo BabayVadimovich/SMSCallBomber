@@ -27,26 +27,32 @@ args = Namespace(country='Two letter country code (Specify ALL for all countries
 args.time += time.time()
 
 attack_threads = {}
+bombers = {}
+bomber_id = 1234567890
 
 # Starting the attack
-def attack_thread_runner(args, message):
+def attack_thread_runner(args):
     bomber = SMSCallBomber(args)
+    bombers[bomber_id] = bomber
     bomber.run()
-    return bomber
 
-attack_threads = threading.Thread(target=attack_thread_runner, args=(args))
+attack_threads = threading.Thread(target=attack_thread_runner, args=(args,))
 attack_threads.start()
 
 # Stopping the attack
 attack_threads.join(0)
 del attack_threads
 time.sleep(5) # Increase the time if the results contain zeros
+bomber = bombers[bomber_id]
+bomber.stop()
 successful, failed = bomber.send_report()
 print(f"Successfully sent (Not everyone can get there!): {successful}")
 print(f"Failed to send: {failed}")
 
 # Returns the result of the attack after it ends
+time.sleep(Attack time in seconds)
 time.sleep(5) # Increase the time if the results contain zeros
+bomber = bombers[bomber_id]
 successful, failed = bomber.send_report()
 print(f"Successfully sent (Not everyone can get there!): {successful}")
 print(f"Failed to send: {failed}")
@@ -98,26 +104,32 @@ args = Namespace(country='Двухбуквенный код страны (Ука
 args.time += time.time()
 
 attack_threads = {}
+bombers = {}
+bomber_id = 1234567890
 
 # Запуск атаки
-def attack_thread_runner(args, message):
+def attack_thread_runner(args):
     bomber = SMSCallBomber(args)
+    bombers[bomber_id] = bomber
     bomber.run()
-    return bomber
 
-attack_threads = threading.Thread(target=attack_thread_runner, args=(args))
+attack_threads = threading.Thread(target=attack_thread_runner, args=(args,))
 attack_threads.start()
 
 # Остановка атаки
 attack_threads.join(0)
 del attack_threads
 time.sleep(5) # Увеличьте время если в результатах по нулям
+bomber = bombers[bomber_id]
+bomber.stop()
 successful, failed = bomber.send_report()
 print(f"Успешно отправлено(Дойти могут не все!): {successful}")
 print(f"Не удалось отправить: {failed}")
 
 # Возвращает результат атаки после её окончания
+time.sleep(Attack time in seconds)
 time.sleep(5) # Увеличьте время если в результатах по нулям
+bomber = bombers[bomber_id]
 successful, failed = bomber.send_report()
 print(f"Успешно отправлено(Дойти могут не все!): {successful}")
 print(f"Не удалось отправить: {failed}")

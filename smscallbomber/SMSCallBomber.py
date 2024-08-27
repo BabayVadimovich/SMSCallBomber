@@ -7,6 +7,7 @@ from requests import exceptions
 import asyncio
 from aiohttp import ClientSession, ClientTimeout
 from itertools import cycle
+import logging
 
 def get_services(country_code, number):
     services = []
