@@ -23,7 +23,7 @@ import threading
 from argparse import Namespace
 
 # Creating an instance of SMSCallBomber
-args = Namespace(country='Two letter country code (Specify ALL for all countries)', phone=Phone number for attack (without +), time=Attack time in seconds, threads=Number of threads, timeout=Request timeout, proxy=Whether to use a proxy for attack (True or False))
+args = Namespace(country='Two letter country code (Specify ALL for all countries)', phone=Phone number for attack (without +), time=Attack time in seconds, threads=Number of threads, timeout=Request timeout, proxy=Whether to use a proxy for attack (True or False or {"http": "http://your.proxy.com", "https": "http://your.proxy.com"}))
 args.time += time.time()
 
 attack_threads = {}
@@ -100,7 +100,7 @@ import threading
 from argparse import Namespace
 
 # Создание экземпляра SMSCallBomber
-args = Namespace(country='Двухбуквенный код страны (Укажите ALL для всех стран)', phone=Номер телефона для атаки (без +), time=Время атаки в секундах, threads=Количество потоков, timeout=Время ожидания запроса, proxy=Использовать ли прокси для атаки (True или False))
+args = Namespace(country='Двухбуквенный код страны (Укажите ALL для всех стран)', phone=Номер телефона для атаки (без +), time=Время атаки в секундах, threads=Количество потоков, timeout=Время ожидания запроса, proxy=Использовать ли прокси для атаки (True или False или {"http": "http://your.proxy.com", "https": "http://your.proxy.com"}))
 args.time += time.time()
 
 attack_threads = {}

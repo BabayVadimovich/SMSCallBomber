@@ -29,7 +29,7 @@ class Service:
         self.timeout = timeout
         self.proxy = None
         if proxy:
-            self.proxy = self.generate_proxy()
+            self.proxy = proxy if proxy is not True else self.generate_proxy()
         self.phone = phone
 
     def __parse_data(self):
