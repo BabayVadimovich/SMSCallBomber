@@ -61,7 +61,14 @@ print(f"Failed to send: {failed}")
 
 It is also possible to use in an asynchronous environment if you slightly modify the code and use 
 ```python
-await bomber._run()
+import asyncio
+async def attack_thread_runner(args):
+    bomber = SMSCallBomber(args)
+    bombers[bomber_id] = bomber
+    await bomber._run()
+
+attack_threads = threading.Thread(target=asyncio.run, args=(attack_thread_runner(args),))
+attack_threads.start()
 ```
 
 ### Donation
@@ -139,7 +146,14 @@ print(f"Не удалось отправить: {failed}")
 
 Также возможно использование в асихронной среде, если немного переделать код и использовать 
 ```python
-await bomber._run()
+import asyncio
+async def attack_thread_runner(args):
+    bomber = SMSCallBomber(args)
+    bombers[bomber_id] = bomber
+    await bomber._run()
+
+attack_threads = threading.Thread(target=asyncio.run, args=(attack_thread_runner(args),))
+attack_threads.start()
 ```
 
 ### Пожертвование
