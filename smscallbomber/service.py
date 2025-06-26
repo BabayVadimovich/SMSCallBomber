@@ -38,7 +38,6 @@ class Service:
         self.data = self.service_info.get('data', {})
         self.json = self.service_info.get('json', {})
 
-
     def __replace_data(self):
         for old, new in {
             "%phone%": self.phone,

