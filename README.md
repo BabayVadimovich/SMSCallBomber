@@ -31,7 +31,7 @@ args = Namespace(
     threads=10,      # Number of concurrent threads
     timeout=5,      # Timeout per request in seconds
     proxy=True,     # True / False or your proxy:
-                     # "http://user:pass@ip:port"
+                     # 'http://user:pass@ip:port'
     log_file='bomber.log',   # Set to None(without quotes) to disable logging to file
     log_level='INFO'         # Logging level: DEBUG, INFO, WARNING, ERROR, CRITICAL
 )
@@ -51,21 +51,19 @@ attack_threads = threading.Thread(target=attack_thread_runner, args=(args,))
 attack_threads.start()
 
 # Returns the result of the attack after it ends
-time.sleep(args.time)
-time.sleep(5) # Increase the time if the results contain zeros
-attack_threads.join(0)
+attack_threads.join()
 bomber = bombers[bomber_id]
 successful, failed = bomber.send_report()
+del attack_threads
 print(f"Successfully sent (Not everyone can get there!): {successful}")
 print(f"Failed to send: {failed}")
 
 # Stopping the attack
 bomber = bombers[bomber_id]
 bomber.stop()
-time.sleep(5) # Increase the time if the results contain zeros
-attack_threads.join(0)
-del attack_threads
+attack_threads.join()
 successful, failed = bomber.send_report()
+del attack_threads
 print(f"Successfully sent (Not everyone can get there!): {successful}")
 print(f"Failed to send: {failed}")
 ```
@@ -120,7 +118,7 @@ args = Namespace(
     threads=10,         # Количество параллельных потоков
     timeout=5,         # Таймаут каждого запроса в секундах
     proxy=True,         # True / False или ваши прокси:
-                        # "http://user:pass@ip:port"
+                        # 'http://user:pass@ip:port'
     log_file='bomber.log',   # Имя файла логов или None(без кавычек) для отключения логирования
     log_level='INFO'         # Уровень логирования: DEBUG, INFO, WARNING, ERROR, CRITICAL
 )
@@ -140,21 +138,19 @@ attack_threads = threading.Thread(target=attack_thread_runner, args=(args,))
 attack_threads.start()
 
 # Возвращает результат атаки после её окончания
-time.sleep(args.time)
-time.sleep(5) # Увеличьте время если в результатах по нулям
-attack_threads.join(0)
+attack_threads.join()
 bomber = bombers[bomber_id]
 successful, failed = bomber.send_report()
+del attack_threads
 print(f"Успешно отправлено(Дойти могут не все!): {successful}")
 print(f"Не удалось отправить: {failed}")
 
 # Остановка атаки
 bomber = bombers[bomber_id]
 bomber.stop()
-time.sleep(5) # Увеличьте время если в результатах по нулям
-attack_threads.join(0)
-del attack_threads
+attack_threads.join()
 successful, failed = bomber.send_report()
+del attack_threads
 print(f"Успешно отправлено(Дойти могут не все!): {successful}")
 print(f"Не удалось отправить: {failed}")
 ```
